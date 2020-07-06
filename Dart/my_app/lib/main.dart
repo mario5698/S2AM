@@ -6,17 +6,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Material App Bar'),
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Hello World'),
+        title: 'Material App',
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            body: SafeArea(
+          bottom: false,
+          left: true,
+          child: ListView(
+            children: List.generate(
+                12, (i) => Text(' $i - Hello Word', style: estilo)),
           ),
-        ),
-      ),
-    );
+        )));
   }
 }
