@@ -22,22 +22,20 @@ class _InicioState extends State<Inicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("test"),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          Container(
-            child: Text(
-              'Data',
-              textAlign: Center,
+        appBar: AppBar(
+          title: Text("test"),
+        ),
+        body: Row(children: <Widget>[
+          Text(" Hello "),
+          Center(
+            child: Container(
+              margin: const EdgeInsets.all(10.0),
+              color: Colors.amber[600],
+              width: 48.0,
+              height: 48.0,
             ),
           ),
-          Text("test"),
-        ],
-      ),
-    );
+          Text(" Word")
+        ]));
   }
 }
