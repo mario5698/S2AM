@@ -58,11 +58,6 @@ class CardPage extends StatelessWidget {
             height: 300.0,
             fit: BoxFit.cover,
           ),
-
-          // Image(
-          //   image: NetworkImage(
-          //       'https://upload.wikimedia.org/wikipedia/commons/8/81/Parque_Eagle_River%2C_Anchorage%2C_Alaska%2C_Estados_Unidos%2C_2017-09-01%2C_DD_02.jpg'),
-          // ),
           Container(
               padding: EdgeInsets.all(10.0), child: Text('i dont have idea '))
         ],
