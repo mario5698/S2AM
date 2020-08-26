@@ -1,6 +1,0 @@
-/Volumes/GoogleDrive/Mi unidad/S2AM/C#/test/test/bin/Debug/test.exe
-/Volumes/GoogleDrive/Mi unidad/S2AM/C#/test/test/bin/Debug/test.pdb
-/Volumes/GoogleDrive/Mi unidad/S2AM/C#/test/test/obj/Debug/test.csprojAssemblyReference.cache
-/Volumes/GoogleDrive/Mi unidad/S2AM/C#/test/test/obj/Debug/test.csproj.CoreCompileInputs.cache
-/Volumes/GoogleDrive/Mi unidad/S2AM/C#/test/test/obj/Debug/test.exe
-/Volumes/GoogleDrive/Mi unidad/S2AM/C#/test/test/obj/Debug/test.pdb
