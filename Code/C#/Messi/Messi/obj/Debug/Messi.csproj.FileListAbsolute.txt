@@ -1,0 +1,10 @@
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\bin\Debug\Messi.exe.config
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\bin\Debug\Messi.exe
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\bin\Debug\Messi.pdb
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\obj\Debug\Messi.csprojAssemblyReference.cache
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\obj\Debug\Messi.Form1.resources
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\obj\Debug\Messi.Properties.Resources.resources
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\obj\Debug\Messi.csproj.GenerateResource.cache
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\obj\Debug\Messi.csproj.CoreCompileInputs.cache
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\obj\Debug\Messi.exe
+C:\Users\mario\Desktop\github\S2AM\Code\C#\Messi\Messi\obj\Debug\Messi.pdb
