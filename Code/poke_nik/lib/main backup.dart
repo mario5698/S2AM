@@ -30,22 +30,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<Dog> initialDoggos = []
-    ..add(Dog(
-        'Ruby',
-        'Portland, OR, USA',
-        'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.',
-        'https://picsum.photos/200/300?random=1'))
-    ..add(Dog('Rex', 'Seattle, WA, USA', 'Best in Show 1999',
-        'https://picsum.photos/200/300?random=5'))
-    ..add(Dog(
-        'Rod Stewart',
-        'Prague, CZ',
-        'Star good boy on international snooze team.',
-        'https://picsum.photos/200/300?random=3'))
-    ..add(Dog('Herbert', 'Dallas, TX, USA', 'A Very Good Boy',
-        'https://picsum.photos/200/300?random=4'))
-    ..add(
-        Dog('Buddy', 'North Pole, Earth', 'Self proclaimed human lover.', 'https://picsum.photos/200/300?random=2'));
+    ..add(Dog('Ruby', 'Portland, OR, USA',
+        'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.'))
+    ..add(Dog('Rex', 'Seattle, WA, USA', 'Best in Show 1999'))
+    ..add(Dog('Rod Stewart', 'Prague, CZ',
+        'Star good boy on international snooze team.'))
+    ..add(Dog('Herbert', 'Dallas, TX, USA', 'A Very Good Boy'))
+    ..add(Dog('Buddy', 'North Pole, Earth', 'Self proclaimed human lover.'));
 
   Future _showNewDogForm() async {
     Dog newDog = await Navigator.of(context)
@@ -84,10 +75,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 .9
               ],
                   colors: [
-                Colors.red,
-                Colors.pink[300],
+                Colors.indigo[800],
+                Colors.indigo[700],
                 Colors.indigo[600],
-                Colors.blue
+                Colors.indigo[400]
               ])),
           child: new Center(
             child: new DogList(initialDoggos),

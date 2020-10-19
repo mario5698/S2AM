@@ -53,7 +53,8 @@ class CardPage extends StatelessWidget {
           FadeInImage(
             image: NetworkImage(
                 'https://upload.wikimedia.org/wikipedia/commons/8/81/Parque_Eagle_River%2C_Anchorage%2C_Alaska%2C_Estados_Unidos%2C_2017-09-01%2C_DD_02.jpg'),
-            placeholder: AssetImage('assets/jar-loading.gif'),
+            placeholder: NetworkImage(
+                "https://www.pokexperto.net/3ds/sprites/pokedex/animados/rayquaza.gif"),
             fadeInDuration: Duration(milliseconds: 500),
             height: 300.0,
             fit: BoxFit.cover,
