@@ -10,6 +10,7 @@ class _AddDogFormPageState extends State<AddDogFormPage> {
   TextEditingController nameController = new TextEditingController();
   TextEditingController locationController = new TextEditingController();
   TextEditingController descriptionController = new TextEditingController();
+  TextEditingController imageUrl = new TextEditingController();
 
   void submitPup(BuildContext context) {
     if (nameController.text.isEmpty) {
@@ -18,14 +19,9 @@ class _AddDogFormPageState extends State<AddDogFormPage> {
         content: new Text('Pups neeed names!'),
       ));
     } else {
-      for (var i = 0; i < 7; i++) {
-        var newDog = new Dog(
-            nameController.text,
-            locationController.text,
-            descriptionController.text,
-            'https://picsum.photos/200/300?random=$i');
-        Navigator.of(context).pop(newDog);
-      }
+      var newDog = new Dog(nameController.text, locationController.text,
+          descriptionController.text, imageUrl.text);
+      Navigator.of(context).pop(newDog);
     }
   }
 

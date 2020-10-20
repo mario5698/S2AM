@@ -28,24 +28,24 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+//añadir url de busqueda
 class _MyHomePageState extends State<MyHomePage> {
   List<Dog> initialDoggos = []
     ..add(Dog(
-        'Ruby',
+        'Bender',
         'Portland, OR, USA',
         'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.',
-        'https://picsum.photos/200/300?random=1'))
-    ..add(Dog('Rex', 'Seattle, WA, USA', 'Best in Show 1999',
-        'https://picsum.photos/200/300?random=5'))
+        'https://vignette.wikia.nocookie.net/esfuturama/images/9/91/Bender_Bending_Rodr%C3%ADguez.png/revision/latest?cb=20130615070942'))
+    ..add(Dog('philips', 'Seattle, WA, USA', 'Best in Show 1999',
+        'https://vignette.wikia.nocookie.net/esfuturama/images/f/f2/PhilipJ.Fry.png/revision/latest?cb=20120825055147'))
     ..add(Dog(
-        'Rod Stewart',
+        'homer ',
         'Prague, CZ',
         'Star good boy on international snooze team.',
-        'https://picsum.photos/200/300?random=3'))
-    ..add(Dog('Herbert', 'Dallas, TX, USA', 'A Very Good Boy',
-        'https://picsum.photos/200/300?random=4'))
-    ..add(
-        Dog('Buddy', 'North Pole, Earth', 'Self proclaimed human lover.', 'https://picsum.photos/200/300?random=2'));
+        'https://www.grupoblc.com/wp-content/uploads/2013/10/images_curiosita_homer.jpg'))
+    ..add(Dog('Bart', 'Dallas, TX, USA', 'A Very Good Boy',
+        'https://img.discogs.com/BxXiv86dhWeXnfPl4eyGU37a92U=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-1010823-1335728016.png.jpg'))
+    ..add(Dog('image random ', 'North Pole, Earth', 'Self proclaimed human lover.', 'https://picsum.photos/200/300?random=2'));
 
   Future _showNewDogForm() async {
     Dog newDog = await Navigator.of(context)
