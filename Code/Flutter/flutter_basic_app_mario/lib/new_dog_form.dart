@@ -10,7 +10,7 @@ class _AddDogFormPageState extends State<AddDogFormPage> {
   TextEditingController nameController = new TextEditingController();
   TextEditingController locationController = new TextEditingController();
   TextEditingController descriptionController = new TextEditingController();
-  TextEditingController imageUrl = new TextEditingController();
+  TextEditingController imageurl = new TextEditingController();
 
   void submitPup(BuildContext context) {
     if (nameController.text.isEmpty) {
@@ -20,7 +20,7 @@ class _AddDogFormPageState extends State<AddDogFormPage> {
       ));
     } else {
       var newDog = new Dog(nameController.text, locationController.text,
-          descriptionController.text, imageUrl.text);
+          descriptionController.text, imageurl.text);
       Navigator.of(context).pop(newDog);
     }
   }

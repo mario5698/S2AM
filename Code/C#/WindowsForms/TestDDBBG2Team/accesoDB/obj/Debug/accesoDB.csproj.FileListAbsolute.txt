@@ -1,0 +1,5 @@
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\accesoDB\bin\Debug\accesoDB.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\accesoDB\bin\Debug\accesoDB.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\accesoDB\obj\Debug\accesoDB.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\accesoDB\obj\Debug\accesoDB.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\accesoDB\obj\Debug\accesoDB.pdb

@@ -1,0 +1,13 @@
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\obj\Debug\TestDDBBG2Team.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\obj\Debug\TestDDBBG2Team.Form1.resources
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\obj\Debug\TestDDBBG2Team.Properties.Resources.resources
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\obj\Debug\TestDDBBG2Team.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\obj\Debug\TestDDBBG2Team.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\bin\Debug\TestDDBBG2Team.exe.config
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\bin\Debug\TestDDBBG2Team.exe
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\bin\Debug\TestDDBBG2Team.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\bin\Debug\accesoDB.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\bin\Debug\accesoDB.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\obj\Debug\TestDDBBG2Team.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\obj\Debug\TestDDBBG2Team.exe
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\WindowsForms\TestDDBBG2Team\TestDDBBG2Team\obj\Debug\TestDDBBG2Team.pdb

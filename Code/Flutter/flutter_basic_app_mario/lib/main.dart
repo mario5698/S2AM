@@ -28,24 +28,23 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-//añadir url de busqueda
 class _MyHomePageState extends State<MyHomePage> {
   List<Dog> initialDoggos = []
     ..add(Dog(
-        'Bender',
+        'Bart',
         'Portland, OR, USA',
         'Ruby is a very good girl. Yes: Fetch, loungin\'. No: Dogs who get on furniture.',
-        'https://vignette.wikia.nocookie.net/esfuturama/images/9/91/Bender_Bending_Rodr%C3%ADguez.png/revision/latest?cb=20130615070942'))
-    ..add(Dog('philips', 'Seattle, WA, USA', 'Best in Show 1999',
-        'https://vignette.wikia.nocookie.net/esfuturama/images/f/f2/PhilipJ.Fry.png/revision/latest?cb=20120825055147'))
+        'https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png'))
+    ..add(Dog('Bender', 'Seattle, WA, USA', 'Best in Show 1999',
+        'https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png'))
     ..add(Dog(
-        'homer ',
+        'Marge',
         'Prague, CZ',
         'Star good boy on international snooze team.',
-        'https://www.grupoblc.com/wp-content/uploads/2013/10/images_curiosita_homer.jpg'))
-    ..add(Dog('Bart', 'Dallas, TX, USA', 'A Very Good Boy',
-        'https://img.discogs.com/BxXiv86dhWeXnfPl4eyGU37a92U=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-1010823-1335728016.png.jpg'))
-    ..add(Dog('image random ', 'North Pole, Earth', 'Self proclaimed human lover.', 'https://picsum.photos/200/300?random=2'));
+        'https://upload.wikimedia.org/wikipedia/en/0/0b/Marge_Simpson.png'))
+    ..add(Dog('leela', 'Dallas, TX, USA', 'A Very Good Boy',
+        'https://cdn.pixabay.com/photo/2018/10/19/06/21/turanga-leela-3757930_960_720.png'))
+    ..add(Dog('maggie', 'North Pole, Earth', 'Self proclaimed human lover.', 'https://vignette.wikia.nocookie.net/lossimpson/images/9/9d/Maggie_Simpson.png/revision/latest?cb=20100529224628&path-prefix=es'));
 
   Future _showNewDogForm() async {
     Dog newDog = await Navigator.of(context)
@@ -84,10 +83,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 .9
               ],
                   colors: [
-                Colors.red,
-                Colors.pink[300],
+                Colors.indigo[800],
+                Colors.indigo[700],
                 Colors.indigo[600],
-                Colors.blue
+                Colors.indigo[400]
               ])),
           child: new Center(
             child: new DogList(initialDoggos),
