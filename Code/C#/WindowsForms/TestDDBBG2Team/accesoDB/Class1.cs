@@ -12,7 +12,6 @@ namespace accesoDB
 {
     public class Class1
     {
-
         private string connectionString;
         private SqlConnection conexion;
         private SqlDataAdapter adaptador;
@@ -24,8 +23,7 @@ namespace accesoDB
             connectionString = ConfigurationManager.ConnectionStrings["TestDDBBG2Team.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
         }
 
-
-        private void conectar(String query)
+        private void Conectar(String query)
         {
             conexion = new SqlConnection(connectionString);
             if (query != null && query != "")
@@ -35,29 +33,24 @@ namespace accesoDB
             }
         }
 
-        public DataTable traerporconsulta(String consulta) 
+        public DataTable Traerporconsulta(String consulta) 
         {
             dts = new DataSet();
             query = consulta;
-            conectar(consulta);
+            Conectar(consulta);
             adaptador.Fill(dts);
             conexion.Close();
             return dts.Tables[0];
         }
 
-
-        public void actualizar()
+        public void Actualizar()
         {
             conexion.Open();
-            
             SqlDataAdapter adaptador = new SqlDataAdapter(query, conexion);
             SqlCommandBuilder test = new SqlCommandBuilder(adaptador);
             adaptador.Update(dts.Tables[0]);
             conexion.Close();
 
         }
-
-
-
     }
 }

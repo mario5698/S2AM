@@ -16,10 +16,6 @@ namespace TestDDBBG2Team
 
         }
 
-
-
-        public static object ConfigurationManager { get; private set; }
-
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = obj;
@@ -27,18 +23,13 @@ namespace TestDDBBG2Team
 
         private void button2_Click(object sender, EventArgs e)
         {
-            acc.actualizar();
+            acc.Actualizar();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             string query = "select * from Users";
-            obj = acc.traerporconsulta(query);
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            obj = acc.Traerporconsulta(query);
         }
     }
 }
