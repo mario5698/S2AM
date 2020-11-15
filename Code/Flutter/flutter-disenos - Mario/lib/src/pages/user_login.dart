@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class Login extends StatelessWidget {
-  static Color mycolor = Colors.red;
+class Login extends StatefulWidget {
+  Login({Key key}) : super(key: key);
 
   @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  static Color mycolor = Colors.purple[100];
+  static Color _textColor = Colors.red;
+  final myControllerUser = TextEditingController();
+  final myControllerPasswd = TextEditingController();
+  @override
+  void dispose() {
+    myControllerUser.dispose();
+    super.dispose();
+  }
+
+  void dispose1() {
+    myControllerPasswd.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
         body: PageView(
@@ -23,11 +42,56 @@ class Login extends StatelessWidget {
     );
   }
 
+  Widget _pagina2(BuildContext context) {
+    return Container(
+      color: mycolor,
+      width: 25,
+      height: 50,
+      // padding: EdgeInsetsDirectional.only(top: 100),
+      child: Column(
+        children: [
+          _crearTextLogin(),
+          _crearcontenedor(context),
+        ],
+      ),
+    );
+  }
+
   Widget _colorFondo() {
     return Container(
       width: double.infinity,
       height: double.infinity,
       color: Color.fromRGBO(108, 192, 218, 1.0),
+    );
+  }
+
+  Widget _crearTextLogin() {
+    return Container(
+      color: Colors.purple[800],
+      padding: const EdgeInsets.only(top: 60, left: 10, bottom: 30),
+      child: Row(
+        children: [
+          RotatedBox(
+            quarterTurns: -1,
+            child: Text(
+              'Sing in',
+              style: TextStyle(
+                color: _textColor,
+                fontSize: 38,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ),
+          Text(
+            'Lore ipsum',
+            style: TextStyle(
+              color: _textColor,
+              fontSize: 38,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -61,22 +125,9 @@ class Login extends StatelessWidget {
     );
   }
 
-  Widget _pagina2(BuildContext context) {
-    return Container(
-      color: mycolor,
-      width: 25,
-      height: 50,
-      padding: EdgeInsetsDirectional.only(top: 100),
-      child: Column(
-        children: [
-          _crearcontenedor(context),
-        ],
-      ),
-    );
-  }
-
   Widget _crearcontenedor(BuildContext context) {
     return Container(
+      padding: EdgeInsetsDirectional.only(top: 80),
       color: mycolor,
       child: Center(
         child: Column(
@@ -92,26 +143,14 @@ class Login extends StatelessWidget {
     );
   }
 
-  Widget _crearBoton(BuildContext context) {
-    return RaisedButton(
-      shape: StadiumBorder(),
-      color: Colors.blue,
-      textColor: Colors.white,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
-        child: Text('Bienvenidos', style: TextStyle(fontSize: 20.0)),
-      ),
-      onPressed: () => Navigator.pushNamed(context, 'botones'),
-    );
-  }
-
   Widget _crearEmail() {
     return TextField(
+      controller: myControllerUser,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
-        hintText: 'email',
-        labelText: 'email',
+        hintText: 'User',
+        labelText: 'User',
         suffixIcon: Icon(Icons.alternate_email),
         icon: Icon(Icons.email),
       ),
@@ -120,6 +159,7 @@ class Login extends StatelessWidget {
 
   Widget _crearPassword() {
     return TextField(
+      controller: myControllerPasswd,
       obscureText: true,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
@@ -129,6 +169,19 @@ class Login extends StatelessWidget {
         suffixIcon: Icon(Icons.lock_open),
         icon: Icon(Icons.lock),
       ),
+    );
+  }
+
+  Widget _crearBoton(BuildContext context) {
+    return RaisedButton(
+      shape: StadiumBorder(),
+      color: Colors.blue,
+      textColor: Colors.white,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 20.0),
+        child: Text('Bienvenidos', style: TextStyle(fontSize: 20.0)),
+      ),
+      onPressed: () => Navigator.pushNamed(context, 'botones'),
     );
   }
 }
