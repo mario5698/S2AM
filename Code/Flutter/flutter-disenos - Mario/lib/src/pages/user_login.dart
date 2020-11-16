@@ -9,7 +9,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  static Color mycolor = Colors.purple[100];
+  static Color mycolor = Colors.white12;
   static Color _textColor = Colors.red;
   final myControllerUser = TextEditingController();
   final myControllerPasswd = TextEditingController();
@@ -25,11 +25,14 @@ class _LoginState extends State<Login> {
   }
 
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+      child: Scaffold(
         body: PageView(
-      scrollDirection: Axis.vertical,
-      children: <Widget>[_pagina1(), _pagina2(context)],
-    ));
+          scrollDirection: Axis.vertical,
+          children: <Widget>[_pagina1(), _pagina2(context)],
+        ),
+      ),
+    );
   }
 
   Widget _pagina1() {
@@ -114,7 +117,6 @@ class _LoginState extends State<Login> {
     return SafeArea(
       child: Column(
         children: <Widget>[
-          Padding(padding: EdgeInsets.only(top: 130.0)),
           SizedBox(height: 20.0),
           Text(datetime, style: estiloTexto),
           Text('Welcome ', style: estiloTexto),
@@ -178,10 +180,10 @@ class _LoginState extends State<Login> {
       color: Colors.blue,
       textColor: Colors.white,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 20.0),
-        child: Text('Bienvenidos', style: TextStyle(fontSize: 20.0)),
+        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+        child: Text('Login', style: TextStyle(fontSize: 20.0)),
       ),
-      onPressed: () => Navigator.pushNamed(context, 'botones'),
+      onPressed: () => Navigator.pushNamed(context, 'basico'),
     );
   }
 }
