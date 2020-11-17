@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:disenos/src/pages/basico_page.dart';
 import 'package:disenos/src/pages/botones_page.dart';
 import 'package:disenos/src/pages/user_login.dart';
+import 'package:disenos/src/pages/rainbow.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         'basico': (BuildContext context) => BasicoPage(),
         'botones': (BuildContext context) => BotonesPage(),
         'login': (BuildContext context) => Login(),
+        'home': (BuildContext context) => MyHomePage(),
       },
     );
   }

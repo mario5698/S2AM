@@ -70,8 +70,13 @@ class _LoginState extends State<Login> {
 
   Widget _crearTextLogin() {
     return Container(
-      color: Colors.purple[800],
-      padding: const EdgeInsets.only(top: 60, left: 10, bottom: 30),
+      padding: const EdgeInsets.only(top: 10, left: 10, bottom: 10),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [Colors.blue[100], Colors.blue[900]]),
+      ),
       child: Row(
         children: [
           RotatedBox(
@@ -129,8 +134,15 @@ class _LoginState extends State<Login> {
 
   Widget _crearcontenedor(BuildContext context) {
     return Container(
-      padding: EdgeInsetsDirectional.only(top: 80),
-      color: mycolor,
+      width: double.maxFinite,
+      height: 634,
+      padding: EdgeInsetsDirectional.only(top: 50),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [Colors.red, Colors.yellow, Colors.green]),
+      ),
       child: Center(
         child: Column(
           children: [
