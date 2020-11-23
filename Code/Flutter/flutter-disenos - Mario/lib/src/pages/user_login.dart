@@ -53,8 +53,7 @@ class _LoginState extends State<Login> {
       // padding: EdgeInsetsDirectional.only(top: 100),
       child: Column(
         children: [
-          _crearTextLogin(),
-          _crearcontenedor(context),
+          _container(context),
         ],
       ),
     );
@@ -68,15 +67,26 @@ class _LoginState extends State<Login> {
     );
   }
 
-  Widget _crearTextLogin() {
+  Widget _container(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 10, left: 10, bottom: 10),
       decoration: BoxDecoration(
         gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
-            colors: [Colors.blue[100], Colors.blue[900]]),
+            colors: [Colors.black, Colors.greenAccent, Colors.green]),
       ),
+      child: Column(
+        children: [
+          _crearTextLogin(),
+          _crearcontenedor(context),
+        ],
+      ),
+    );
+  }
+
+  Widget _crearTextLogin() {
+    return Container(
+      padding: const EdgeInsets.only(top: 10, left: 10, bottom: 10),
       child: Row(
         children: [
           RotatedBox(
@@ -137,12 +147,6 @@ class _LoginState extends State<Login> {
       width: double.maxFinite,
       height: 634,
       padding: EdgeInsetsDirectional.only(top: 50),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [Colors.red, Colors.yellow, Colors.green]),
-      ),
       child: Center(
         child: Column(
           children: [
