@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:peliculas/src/models/pelicula_model.dart';
 import 'package:peliculas/src/providers/peliculas_provider.dart';
+import 'package:peliculas/src/models/actores_model.dart';
 import 'package:peliculas/src/search/search_delegate.dart';
-import 'package:peliculas/src/widgets/card_swiper_widget.dart';
 import 'package:peliculas/src/widgets/movie_horizontal.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,50 +10,103 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    peliculasProvider.getPopulares();
+    Pelicula pelicula = ModalRoute.of(context).settings.arguments;
+    String peliculaID;
 
+    peliculasProvider.getPopulares();
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: false,
-          title: Text('Películas en cines'),
-          backgroundColor: Colors.indigoAccent,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                showSearch(
-                  context: context,
-                  delegate: DataSearch(),
-                  // query: 'Hola'
-                );
-              },
-            )
+      appBar: AppBar(
+        centerTitle: false,
+        title: Text('Películas en cines'),
+        backgroundColor: Colors.indigoAccent,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              showSearch(
+                context: context,
+                delegate: DataSearch(),
+              );
+            },
+          )
+        ],
+      ),
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            //_descripcion(pelicula),
+            _crearCasting(pelicula),
+            _footer(context),
           ],
         ),
-        body: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              _footer(context),
-              _swiperTarjetas(),
-            ],
-          ),
-        ));
+      ),
+    );
   }
 
-  Widget _swiperTarjetas() {
+/////////////////////
+//descripcion pelicula
+  Widget _descripcion(Pelicula pelicula) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+      child: Text(
+        pelicula.overview,
+        textAlign: TextAlign.justify,
+      ),
+    );
+  }
+
+//
+//swiper tarjeta importado
+
+  Widget _crearCasting(Pelicula pelicula) {
+    final peliProvider = new PeliculasProvider();
+
     return FutureBuilder(
-      future: peliculasProvider.getCast("32"),
-      builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
+      future: peliProvider.getCast("32"), //pelicula.id.toString()),
+      builder: (context, AsyncSnapshot<List> snapshot) {
         if (snapshot.hasData) {
-          return CardSwiper(Actores: snapshot.data);
+          return _crearActoresPageView(snapshot.data);
         } else {
-          return Container(
-              height: 400.0, child: Center(child: CircularProgressIndicator()));
+          return Center(child: CircularProgressIndicator());
         }
       },
     );
   }
+
+  Widget _crearActoresPageView(List<Actor> actores) {
+    return SizedBox(
+      height: 200.0,
+      child: PageView.builder(
+        pageSnapping: false,
+        controller: PageController(viewportFraction: 0.3, initialPage: 1),
+        itemCount: actores.length,
+        itemBuilder: (context, i) => _actorTarjeta(actores[i]),
+      ),
+    );
+  }
+
+  Widget _actorTarjeta(Actor actor) {
+    return Container(
+        child: Column(
+      children: <Widget>[
+        ClipRRect(
+          borderRadius: BorderRadius.circular(20.0),
+          child: FadeInImage(
+            image: NetworkImage(actor.getFoto()),
+            placeholder: AssetImage('assets/img/no-image.jpg'),
+            height: 150.0,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Text(
+          actor.name,
+          overflow: TextOverflow.ellipsis,
+        )
+      ],
+    ));
+  }
+//////////////////
 
   Widget _footer(BuildContext context) {
     return Container(
