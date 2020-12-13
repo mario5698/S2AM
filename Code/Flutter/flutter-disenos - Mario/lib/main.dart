@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         'basico': (BuildContext context) => BasicoPage(),
         'botones': (BuildContext context) => BotonesPage(),
         'login': (BuildContext context) => Login(),
-        'home': (BuildContext context) => MyHomePage(),
+        //'home': (BuildContext context) => MyHomePage(),
       },
     );
   }

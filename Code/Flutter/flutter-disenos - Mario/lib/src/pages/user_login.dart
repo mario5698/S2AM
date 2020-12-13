@@ -50,10 +50,10 @@ class _LoginState extends State<Login> {
       color: mycolor,
       width: 25,
       height: 50,
-      // padding: EdgeInsetsDirectional.only(top: 100),
       child: Column(
         children: [
-          _container(context),
+          _crearTextLogin(),
+          _crearcontenedor(context),
         ],
       ),
     );
@@ -64,23 +64,6 @@ class _LoginState extends State<Login> {
       width: double.infinity,
       height: double.infinity,
       color: Color.fromRGBO(108, 192, 218, 1.0),
-    );
-  }
-
-  Widget _container(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [Colors.black, Colors.greenAccent, Colors.green]),
-      ),
-      child: Column(
-        children: [
-          _crearTextLogin(),
-          _crearcontenedor(context),
-        ],
-      ),
     );
   }
 

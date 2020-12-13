@@ -16,7 +16,7 @@ class _BasicoPageState extends State<BasicoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Color.fromRGBO(62, 66, 107, 0.7),
+        color: Color.fromRGBO(255, 66, 107, 0.7),
         child: Column(
           children: <Widget>[
             _crearImagen(context),

@@ -11,7 +11,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Pelicula pelicula = ModalRoute.of(context).settings.arguments;
-    String peliculaID;
+
+    String peliculaID = "32"; // pelicula.id.toString();
 
     peliculasProvider.getPopulares();
     return Scaffold(
@@ -36,7 +37,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             //_descripcion(pelicula),
-            _crearCasting(pelicula),
+            _crearCasting(peliculaID),
             _footer(context),
           ],
         ),
@@ -48,7 +49,7 @@ class HomePage extends StatelessWidget {
 //descripcion pelicula
   Widget _descripcion(Pelicula pelicula) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+      padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
       child: Text(
         pelicula.overview,
         textAlign: TextAlign.justify,
@@ -59,18 +60,22 @@ class HomePage extends StatelessWidget {
 //
 //swiper tarjeta importado
 
-  Widget _crearCasting(Pelicula pelicula) {
+  Widget _crearCasting(String pelicula) {
     final peliProvider = new PeliculasProvider();
 
-    return FutureBuilder(
-      future: peliProvider.getCast("32"), //pelicula.id.toString()),
-      builder: (context, AsyncSnapshot<List> snapshot) {
-        if (snapshot.hasData) {
-          return _crearActoresPageView(snapshot.data);
-        } else {
-          return Center(child: CircularProgressIndicator());
-        }
-      },
+    return Container(
+      margin: EdgeInsetsDirectional.only(top: 10),
+      color: Colors.amber,
+      child: FutureBuilder(
+        future: peliProvider.getCast(pelicula), //pelicula.id.toString()),
+        builder: (context, AsyncSnapshot<List> snapshot) {
+          if (snapshot.hasData) {
+            return _crearActoresPageView(snapshot.data);
+          } else {
+            return Center(child: CircularProgressIndicator());
+          }
+        },
+      ),
     );
   }
 
