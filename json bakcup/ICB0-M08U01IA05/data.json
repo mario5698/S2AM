@@ -1,6 +1,6 @@
 [{
     "id": 1,
-    "email": "michael.lawson@demo.io",
+    "email": "test.lawson@demo.io",
     "firstName": "Michael",
     "lastName": "Lawson",
     "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"
