@@ -11,14 +11,12 @@ class Data {
   String email;
   String firstName;
   String lastName;
-  String avatar;
 
   Data({
     this.id,
     this.email,
     this.firstName,
     this.lastName,
-    this.avatar,
   });
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
@@ -26,14 +24,11 @@ class Data {
         email: json["email"],
         firstName: json["firstName"],
         lastName: json["lastName"],
-        avatar: json["avatar"],
       );
-
   Map<String, dynamic> toJson() => {
         "id": id,
         "email": email,
         "firstName": firstName,
         "lastName": lastName,
-        "avatar": avatar,
       };
 }
