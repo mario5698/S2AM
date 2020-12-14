@@ -11,7 +11,11 @@ class SqlitePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text('Hello sqlite'),
+          child: Column(
+            children: [
+              Text('Sqlite page'),
+            ],
+          ),
         ),
       ),
     );

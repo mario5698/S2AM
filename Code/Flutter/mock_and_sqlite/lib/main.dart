@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mock_and_sqlite/pages/Home_page.dart';
-import 'package:mock_and_sqlite/pages/Sqlite/Sqlite_page.dart';
+import 'package:mock_and_sqlite/pages/Sqlite/page/Sqlite_page.dart';
 import 'package:mock_and_sqlite/pages/Mock/Mock_page.dart';
 
 void main() => runApp(MyApp());
