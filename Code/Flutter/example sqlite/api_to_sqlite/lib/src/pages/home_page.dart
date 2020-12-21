@@ -1,15 +1,15 @@
-import 'package:mock_and_sqlite/pages/Sqlite/page/providers/db_provider.dart';
-import 'package:mock_and_sqlite/pages/Sqlite/page/providers/employee_api_provider.dart';
+import 'package:api_to_sqlite_flutter/src/providers/db_provider.dart';
+import 'package:api_to_sqlite_flutter/src/providers/employee_api_provider.dart';
 import 'package:flutter/material.dart';
 
-class SqlitePage extends StatefulWidget {
-  const SqlitePage({Key key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key key}) : super(key: key);
 
   @override
-  _SqlitePageState createState() => _SqlitePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _SqlitePageState extends State<SqlitePage> {
+class _HomePageState extends State<HomePage> {
   var isLoading = false;
 
   @override

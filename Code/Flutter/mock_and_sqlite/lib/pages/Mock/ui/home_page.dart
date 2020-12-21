@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:mock_and_sqlite/pages/Mock/bloc/todo_bloc.dart';
 import 'package:mock_and_sqlite/pages/Mock/model/todo.dart';
 
-class MockPage extends StatelessWidget {
-  MockPage({Key key, this.title}) : super(key: key);
+class HomePage extends StatelessWidget {
+  HomePage({Key key, this.title}) : super(key: key);
 
   //We load our Todo BLoC that is used to get
   //the stream of Todo for StreamBuilder
