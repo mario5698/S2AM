@@ -3,35 +3,41 @@
     "email": "test.lawson@demo.io",
     "firstName": "Michael",
     "lastName": "Lawson",
+    "avatar":"test"
 },
 {
     "id": 2,
     "email": "lindsay.ferguson@demo.io",
     "firstName": "Lindsay",
     "lastName": "Ferguson",
+    "avatar":"test"
 },
 {
     "id": 3,
     "email": "tobias.funke@demo.io",
     "firstName": "Tobias",
     "lastName": "Funke",
+    "avatar":"test"
 },
 {
     "id": 4,
     "email": "byron.fields@demo.io",
     "firstName": "Byron",
     "lastName": "Fields",
+    "avatar":"test"
 },
 {
     "id": 5,
     "email": "george.edwards@demo.io",
     "firstName": "George",
     "lastName": "Edwards",
+    "avatar":"test"
 },
 {
     "id": 6,
     "email": "rachel.howell@demo.io",
     "firstName": "Rachel",
     "lastName": "Howell",
+    "avatar":"test"
 }
 ]
