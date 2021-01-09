@@ -414,9 +414,6 @@ class MockPage extends StatelessWidget {
   }
 
   dispose() {
-    /*close the stream in order
-    to avoid memory leaks
-    */
     todoBloc.dispose();
   }
 }
