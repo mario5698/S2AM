@@ -2,42 +2,35 @@
     "id": 1,
     "email": "test.lawson@demo.io",
     "firstName": "Michael",
-    "lastName": "Lawson",
-    "avatar":"test"
+    "lastName": "Lawson"
 },
 {
     "id": 2,
     "email": "lindsay.ferguson@demo.io",
     "firstName": "Lindsay",
-    "lastName": "Ferguson",
-    "avatar":"test"
+    "lastName": "Ferguson"
 },
 {
     "id": 3,
     "email": "tobias.funke@demo.io",
     "firstName": "Tobias",
-    "lastName": "Funke",
-    "avatar":"test"
+    "lastName": "Funke"
 },
 {
     "id": 4,
     "email": "byron.fields@demo.io",
     "firstName": "Byron",
-    "lastName": "Fields",
-    "avatar":"test"
+    "lastName": "Fields"
 },
 {
     "id": 5,
     "email": "george.edwards@demo.io",
     "firstName": "George",
-    "lastName": "Edwards",
-    "avatar":"test"
+    "lastName": "Edwards"
 },
 {
     "id": 6,
     "email": "rachel.howell@demo.io",
     "firstName": "Rachel",
-    "lastName": "Howell",
-    "avatar":"test"
-}
-]
+    "lastName": "Howell"
+}]
