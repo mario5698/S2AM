@@ -11,14 +11,12 @@ class Employee {
   String email;
   String firstName;
   String lastName;
-  String avatar;
 
   Employee({
     this.id,
     this.email,
     this.firstName,
     this.lastName,
-    this.avatar,
   });
 
   factory Employee.fromJson(Map<String, dynamic> json) => Employee(
@@ -26,7 +24,6 @@ class Employee {
         email: json["email"],
         firstName: json["firstName"],
         lastName: json["lastName"],
-        avatar: json["avatar"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -34,6 +31,5 @@ class Employee {
         "email": email,
         "firstName": firstName,
         "lastName": lastName,
-        "avatar": avatar,
       };
 }

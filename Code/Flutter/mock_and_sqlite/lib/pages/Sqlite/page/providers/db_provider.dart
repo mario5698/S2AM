@@ -32,8 +32,7 @@ class DBProvider {
           'id INTEGER PRIMARY KEY,'
           'email TEXT,'
           'firstName TEXT,'
-          'lastName TEXT,'
-          'avatar TEXT'
+          'lastName TEXT'
           ')');
     });
   }
