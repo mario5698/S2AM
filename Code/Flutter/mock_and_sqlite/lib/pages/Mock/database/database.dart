@@ -6,6 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
 final todoTABLE = 'Todo';
+
 class DatabaseProvider {
   static final DatabaseProvider dbProvider = DatabaseProvider();
 
@@ -36,9 +37,6 @@ class DatabaseProvider {
     await database.execute("CREATE TABLE $todoTABLE ("
         "id INTEGER PRIMARY KEY, "
         "description TEXT, "
-        /*SQLITE doesn't have boolean type
-        so we store isDone as integer where 0 is false
-        and 1 is true*/
         "is_done INTEGER "
         ")");
   }

@@ -24,8 +24,7 @@ class MockPage extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage(
-                  "https://image.freepik.com/vector-gratis/fondo-pantalla-movil-manchas-acuarela-colores_79603-462.jpg"),
+              image: AssetImage('assets/images/colorines.jpg'),
               fit: BoxFit.cover,
             ),
           ),
@@ -40,8 +39,7 @@ class MockPage extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage(
-                  "https://www.gizlogic.com/wp-content/uploads/2018/01/DUpSwxPX4AAP9Ud.jpg"),
+              image: AssetImage('assets/images/fondo.jpg'),
               fit: BoxFit.cover,
             ),
             border: Border(

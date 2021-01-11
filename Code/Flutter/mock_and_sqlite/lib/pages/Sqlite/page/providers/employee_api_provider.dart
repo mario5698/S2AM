@@ -6,18 +6,15 @@ import 'package:dio/dio.dart';
 class EmployeeApiProvider {
   Future<List<Employee>> getAllEmployees() async {
     Response response;
-    try {
-      var url =
-          "https://raw.githubusercontent.com/mario5698/S2AM/master/json%20bakcup/ICB0-M08U01IA05/data.json";
-      response = await Dio().get(url);
-      print(response);
-    } catch (e) {
-      print(e);
-    }
 
-    return (response.data as List).map((employee) {
-      print('Inserting $employee');
-      DBProvider.db.createEmployee(Employee.fromJson(employee));
-    }).toList();
+    var url = "http://demo9145205.mockable.io/fluttertest";
+    response = await Dio().get(url);
+    print(response);
+    return (response.data as List).map(
+      (employee) {
+        print('Inserting $employee');
+        DBProvider.db.createEmployee(Employee.fromJson(employee));
+      },
+    ).toList();
   }
 }

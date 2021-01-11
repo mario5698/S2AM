@@ -50,7 +50,6 @@ class DBProvider {
   Future<int> deleteAllEmployees() async {
     final db = await database;
     final res = await db.rawDelete('DELETE FROM Employee');
-
     return res;
   }
 
