@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -256,35 +254,26 @@ class _HeaderCurvoPainter2Gradient extends CustomPainter {
     final Rect rect = new Rect.fromCircle(center: Offset(0, 55.0), radius: 180);
 
     final Gradient gradiente = new LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: <Color>[
-          Color(0xff6D05E8),
-          Color(0xffC012FF),
-          Color(0xff6F05FA),
-          Colors.yellow,
-        ],
-        stops: [
-          0.2,
-          0.3,
-          0.4,
-          1.0
-        ]);
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: [Colors.blue, Colors.purple, Colors.pink],
+      stops: [0.3, 0.6, 0.9],
+    );
     final lapiz = Paint()..shader = gradiente.createShader(rect);
 
     //propiedades
     lapiz.color = Color(0xff615AAB);
     lapiz.style = PaintingStyle.fill; // fill
-    lapiz.strokeWidth = 12;
+    lapiz.strokeWidth = 10;
     final path = new Path();
     //dibujar con el path y lapiz
     path.moveTo(0, 0);
     path.lineTo(0, size.height * 0.2);
-    path.quadraticBezierTo(size.width * 0.25, size.height * 0.1,
+    path.quadraticBezierTo(size.width * 0.25, size.height * 0.15,
         size.width * 0.5, size.height * 0.2);
 
     path.quadraticBezierTo(
-        size.width * 0.75, size.height * 0.3, size.width, size.height * 0.2);
+        size.width * 0.75, size.height * 0.25, size.width, size.height * 0.2);
 
     path.lineTo(size.width, 0);
     path.lineTo(0, 0);
