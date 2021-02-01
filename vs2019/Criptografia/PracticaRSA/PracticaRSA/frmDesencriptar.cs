@@ -15,12 +15,12 @@ namespace PracticaRSA
     public partial class frmDesencriptar : Form
     {
         UnicodeEncoding ByteConverter = new UnicodeEncoding();
+        RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
 
-        string texto;
-        string path;
+
         string FullPath;
         byte[] decryptedData;
-        byte[] encryptedData ;
+        byte[] DataToDecrypt;
         
 
         private byte[] _DadesEnc;
@@ -31,7 +31,6 @@ namespace PracticaRSA
             set { _DadesEnc = value; }
         }
 
-
         public frmDesencriptar()
         {
             InitializeComponent();
@@ -39,44 +38,15 @@ namespace PracticaRSA
         
         private void btn_decrypt_Click(object sender, EventArgs e)
         {
-            using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
-            {
-                encryptedData = _DadesEnc;
-                decryptedData = RSA.Decrypt(encryptedData, false);
-
-                tbx_decrypted.Text = ByteConverter.GetString(decryptedData);
-
-            }
-        }
-
-        public static byte[] RSADecrypt(byte[] DataToDecrypt, RSAParameters RSAKeyInfo, bool DoOAEPPadding)
-        {
-            try
-            {
-                byte[] decryptedData;
-                using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
-                {
-
-                    RSA.ImportParameters(RSAKeyInfo);
-                    decryptedData = RSA.Decrypt(DataToDecrypt, DoOAEPPadding);
-                }
-                return decryptedData;
-            }
-
-            catch (CryptographicException e)
-            {
-                Console.WriteLine(e.ToString());
-
-                return null;
-            }
+            decryptedData =  rsa.Decrypt(_DadesEnc, true);
+            tbx_decrypted.Text = ByteConverter.GetString(decryptedData);
         }
 
         private void btn_routeXML_Click(object sender, EventArgs e)
         {
+            const string nameContainer= "RSA";
             string path;
-           
             FolderBrowserDialog dialog = new FolderBrowserDialog();
-
             if (dialog.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(dialog.SelectedPath))
             {
                 path = dialog.SelectedPath;
@@ -88,21 +58,28 @@ namespace PracticaRSA
                 }
                 else
                 {
-                    FullPath = path + "\\RSA.xml";
+                    FullPath = path + "\\"+ nameContainer+".xml";
                     MessageBox.Show(FullPath);
                     tbx_routeXML.Text = FullPath;
-
                 }
             }
         }
 
         private void btn_generate_Click(object sender, EventArgs e)
         {
-            string keyname = tbx_container.Text;
+            string keyname;
+            if (!(tbx_container.Text == null && tbx_container.Text == ""))
+            {
+                keyname = tbx_container.Text;
+            }
+            else
+            {
+                keyname = "RSA";
+            }
             CspParameters Cspp = new CspParameters();
-            Cspp.KeyContainerName = keyname;
-            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(Cspp);
-            string publickey = rsa.ToXmlString(true);
+            Cspp.KeyContainerName = keyname; 
+             rsa = new RSACryptoServiceProvider(Cspp);
+            string publickey = rsa.ToXmlString(false);
             rsa.PersistKeyInCsp = true;
             File.WriteAllText(FullPath, publickey);
         }

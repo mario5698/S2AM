@@ -1,0 +1,30 @@
+C:\Users\josep\source\repos\PracticaTCP\PracticaTCP\bin\Debug\PracticaTCP.exe.config
+C:\Users\josep\source\repos\PracticaTCP\PracticaTCP\bin\Debug\PracticaTCP.exe
+C:\Users\josep\source\repos\PracticaTCP\PracticaTCP\bin\Debug\PracticaTCP.pdb
+C:\Users\josep\source\repos\PracticaTCP\PracticaTCP\obj\Debug\PracticaTCP.frmServer.resources
+C:\Users\josep\source\repos\PracticaTCP\PracticaTCP\obj\Debug\PracticaTCP.Properties.Resources.resources
+C:\Users\josep\source\repos\PracticaTCP\PracticaTCP\obj\Debug\TCPServer.csproj.GenerateResource.cache
+C:\Users\josep\source\repos\PracticaTCP\PracticaTCP\obj\Debug\TCPServer.csproj.CoreCompileInputs.cache
+C:\Users\josep\source\repos\PracticaTCP\PracticaTCP\obj\Debug\PracticaTCP.exe
+C:\Users\josep\source\repos\PracticaTCP\PracticaTCP\obj\Debug\PracticaTCP.pdb
+C:\Salesians\20-21\S2AM\Practiques\AF\PRJ03\Sprints\S2 Sockets TCP-IP\PracticaTCP\TCPServer\bin\Debug\PracticaTCP.exe.config
+C:\Salesians\20-21\S2AM\Practiques\AF\PRJ03\Sprints\S2 Sockets TCP-IP\PracticaTCP\TCPServer\bin\Debug\PracticaTCP.exe
+C:\Salesians\20-21\S2AM\Practiques\AF\PRJ03\Sprints\S2 Sockets TCP-IP\PracticaTCP\TCPServer\bin\Debug\PracticaTCP.pdb
+C:\Salesians\20-21\S2AM\Practiques\AF\PRJ03\Sprints\S2 Sockets TCP-IP\PracticaTCP\TCPServer\obj\Debug\PracticaTCP.frmServer.resources
+C:\Salesians\20-21\S2AM\Practiques\AF\PRJ03\Sprints\S2 Sockets TCP-IP\PracticaTCP\TCPServer\obj\Debug\PracticaTCP.Properties.Resources.resources
+C:\Salesians\20-21\S2AM\Practiques\AF\PRJ03\Sprints\S2 Sockets TCP-IP\PracticaTCP\TCPServer\obj\Debug\TCPServer.csproj.GenerateResource.cache
+C:\Salesians\20-21\S2AM\Practiques\AF\PRJ03\Sprints\S2 Sockets TCP-IP\PracticaTCP\TCPServer\obj\Debug\TCPServer.csproj.CoreCompileInputs.cache
+C:\Salesians\20-21\S2AM\Practiques\AF\PRJ03\Sprints\S2 Sockets TCP-IP\PracticaTCP\TCPServer\obj\Debug\PracticaTCP.exe
+C:\Salesians\20-21\S2AM\Practiques\AF\PRJ03\Sprints\S2 Sockets TCP-IP\PracticaTCP\TCPServer\obj\Debug\PracticaTCP.pdb
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\TCPServer\bin\Debug\PracticaTCP.exe.config
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\TCPServer\bin\Debug\PracticaTCP.exe
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\TCPServer\bin\Debug\PracticaTCP.pdb
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\TCPServer\obj\Debug\PracticaTCP.frmServer.resources
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\TCPServer\obj\Debug\PracticaTCP.Properties.Resources.resources
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\TCPServer\obj\Debug\TCPServer.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\TCPServer\obj\Debug\TCPServer.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\TCPServer\obj\Debug\PracticaTCP.exe
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\TCPServer\obj\Debug\PracticaTCP.pdb
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\ejecutables\PracticaTCP.exe.config
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\ejecutables\PracticaTCP.exe
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\PracticaTCP\PracticaTCP\ejecutables\PracticaTCP.pdb

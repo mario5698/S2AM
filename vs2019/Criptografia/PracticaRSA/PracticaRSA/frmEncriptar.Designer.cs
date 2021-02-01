@@ -65,6 +65,7 @@
             this.btn_showKey.TabIndex = 32;
             this.btn_showKey.Text = "Mostrar clau";
             this.btn_showKey.UseVisualStyleBackColor = true;
+            this.btn_showKey.Click += new System.EventHandler(this.btn_showKey_Click);
             // 
             // btn_send
             // 
@@ -89,7 +90,6 @@
             this.tbx_crypted.Name = "tbx_crypted";
             this.tbx_crypted.Size = new System.Drawing.Size(288, 20);
             this.tbx_crypted.TabIndex = 28;
-            this.tbx_crypted.TextChanged += new System.EventHandler(this.tbx_crypted_TextChanged);
             // 
             // label5
             // 

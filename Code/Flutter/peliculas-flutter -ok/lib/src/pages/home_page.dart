@@ -7,12 +7,11 @@ import 'package:peliculas/src/widgets/movie_horizontal.dart';
 
 class HomePage extends StatelessWidget {
   final peliculasProvider = new PeliculasProvider();
-
   @override
   Widget build(BuildContext context) {
     Pelicula pelicula = ModalRoute.of(context).settings.arguments;
 
-    String peliculaID = "32"; // pelicula.id.toString();
+    String peliculaID = "22"; // pelicula.id.toString();
 
     peliculasProvider.getPopulares();
     return Scaffold(
@@ -38,7 +37,7 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             //_descripcion(pelicula),
             _crearCasting(peliculaID),
-            _footer(context),
+            _footer(context, peliculaID),
           ],
         ),
       ),
@@ -62,7 +61,6 @@ class HomePage extends StatelessWidget {
 
   Widget _crearCasting(String pelicula) {
     final peliProvider = new PeliculasProvider();
-
     return Container(
       margin: EdgeInsetsDirectional.only(top: 10),
       color: Colors.amber,
@@ -113,16 +111,19 @@ class HomePage extends StatelessWidget {
   }
 //////////////////
 
-  Widget _footer(BuildContext context) {
+  Widget _footer(BuildContext context, String peliculaID) {
     return Container(
+      color: Colors.amber,
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-              padding: EdgeInsets.only(left: 20.0),
-              child: Text('Populares',
-                  style: Theme.of(context).textTheme.subhead)),
+            color: Colors.red,
+            padding: EdgeInsets.only(left: 20.0),
+            child:
+                Text('Populares', style: Theme.of(context).textTheme.subhead),
+          ),
           SizedBox(height: 5.0),
           StreamBuilder(
             stream: peliculasProvider.popularesStream,
@@ -130,6 +131,7 @@ class HomePage extends StatelessWidget {
               if (snapshot.hasData) {
                 return MovieHorizontal(
                   peliculas: snapshot.data,
+                  //  siguientePagina: peliculasProvider.getPopulares,
                   siguientePagina: peliculasProvider.getPopulares,
                 );
               } else {

@@ -24,6 +24,21 @@ class PeliculaDetalle extends StatelessWidget {
     ));
   }
 
+  Widget _crearCasting(Pelicula pelicula) {
+    final peliProvider = new PeliculasProvider();
+
+    return FutureBuilder(
+      future: peliProvider.getCast(pelicula.id.toString()),
+      builder: (context, AsyncSnapshot<List> snapshot) {
+        if (snapshot.hasData) {
+          return _crearActoresPageView(snapshot.data);
+        } else {
+          return Center(child: CircularProgressIndicator());
+        }
+      },
+    );
+  }
+
   Widget _crearAppbar(Pelicula pelicula) {
     return SliverAppBar(
       elevation: 2.0,
@@ -95,21 +110,6 @@ class PeliculaDetalle extends StatelessWidget {
         pelicula.overview,
         textAlign: TextAlign.justify,
       ),
-    );
-  }
-
-  Widget _crearCasting(Pelicula pelicula) {
-    final peliProvider = new PeliculasProvider();
-
-    return FutureBuilder(
-      future: peliProvider.getCast(pelicula.id.toString()),
-      builder: (context, AsyncSnapshot<List> snapshot) {
-        if (snapshot.hasData) {
-          return _crearActoresPageView(snapshot.data);
-        } else {
-          return Center(child: CircularProgressIndicator());
-        }
-      },
     );
   }
 
