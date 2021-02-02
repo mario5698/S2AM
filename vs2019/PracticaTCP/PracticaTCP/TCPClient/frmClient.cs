@@ -7,7 +7,12 @@ using System.Net.NetworkInformation;
 using System.Net;
 using System.Threading;
 using System.Configuration;
-
+using System.Xml.Linq;
+using System.Linq;
+using System.Collections.Generic;
+using System.Net.Sockets;
+using System.IO;
+using System.Text;
 
 namespace TCPClient
 {
@@ -17,42 +22,123 @@ namespace TCPClient
         bool network;
         IPAddress address;
         Ping myPing = new Ping();
+        TcpClient Client =null;
         PingReply reply;
         int[] ping = new int[10];
-      //  ThreadStart delegado;
-        //Thread hilo1;
-
+        List<Thread> hilos = new List<Thread>();
+        Thread hilo1, hilo2, hilo3;
+        NetworkStream NetStream;
+        Stream stm; 
         public frmClient()
         {
             InitializeComponent();
+           //permite usar funciones ilegales como hilos 
+          // ejemplo: un hilo invoca a el texbox para darle un valor
+         //   CheckForIllegalCrossThreadCalls = false;
         }
-        private string obtenerconfig(string key)
+        #region botones formulario
+        private void btn_config_Click(object sender, EventArgs e)
         {
-            string value;
-            b var appSettings = ConfigurationManager.AppSettings;
-             value = appSettings[key];
-
-            return value;
+          //  GuardarXml();
         }
-
 
         private void btn_comprovarXarxa_Click(object sender, EventArgs e)
         {
-            
-            string ip = obtenerconfig("IP");
-            string port = obtenerconfig("PORT");
-            txb_ip.Text = ip;
-            txb_port.Text = port;
-          //  comprovarRed();
-            //usar hilo para comprobar que hay conexion a internet
-            /* delegado = new ThreadStart(comprovarRed);
-             hilo1 = new Thread(delegado);
-             hilo1.Interrupt();
+            CargarXML();
+            ComprobarRed();
+        }
+        private void btn_sendMessage_Click(object sender, EventArgs e)
+        {
+            Client = new TcpClient(txb_ip.Text, Int32.Parse(txb_port.Text));
+            NetStream = Client.GetStream();
+            byte[] frase = Encoding.UTF8.GetBytes(txb_message.Text);
+            NetStream.Write(frase,0,frase.Length);
 
-             hilo1.Start();*/
+
+        }
+        private void btn_desconnect_Click(object sender, EventArgs e)
+        {
+            foreach (Thread T in hilos) if (T.IsAlive) T.Abort();
+            /*
+            hilo1.Abort();
+            hilo2.Abort();
+            hilo3.Abort();
+            */
+        }
+        #endregion
+
+        #region Creador de Hilos
+        private void CargarXML()
+        {
+            hilo1 = new Thread(IniciarHiloXML);
+            hilos.Add(hilo1);
+            hilo1.Start();
+        }
+        private void ComprobarRed()
+        {
+            hilo2 = new Thread(IniciarHiloRed);
+            hilos.Add(hilo2);
+            hilo2.Start();
+        }  
+
+        private void GuardarXml()
+        {
+            hilo3 = new Thread(IniciarHiloGuardado);
+            hilos.Add(hilo3);
+            hilo3.Start();
+        }
+        #endregion
+
+        #region Invokes Si se requiere la invocaion del hilo esto lo permite
+        private void IniciarHiloRed(){
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => comprovarRed()));
+            }
+        }
+       
+        private void IniciarHiloXML() {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => cargarXml()));
+            }
+        }
+     
+        private void IniciarHiloGuardado()
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(()=> guardarXml()));
+            }
+        }
+        #endregion
+
+        #region Funciones
+        private void cargarXml() {
+            XElement options = XElement.Load(".\\TCPSettings.xml");
+
+            foreach (XElement xEle in options.Descendants("IP"))
+            {
+                txb_ip.Text = xEle.Value; 
+            }
+            foreach (XElement xEle in options.Descendants("Port"))
+            {
+                txb_port.Text = xEle.Value;
+            }
         }
 
+        
 
+        private void guardarXml()
+        {
+            XElement IP = XElement.Load("TCPSettings.xml");
+            IEnumerable<XElement> direccio = (from Direcion in IP.Elements("TCP")
+                                                     select Direcion);
+
+            direccio.First().Element("IP").Value = txb_ip.Text;
+            direccio.First().Element("Port").Value = txb_ip.Text;
+            IP.Save("TCPSettings.xml");
+        }
 
         private void comprovarRed()
         {
@@ -61,7 +147,7 @@ namespace TCPClient
 
             if (network)
             {
-                address = IPAddress.Parse("8.8.8.8");
+                address = IPAddress.Parse("192.168.1.1");
                 reply = myPing.Send(address, 80);
                 for (int i = 1; i <= 10; i++)
                 {
@@ -90,20 +176,6 @@ namespace TCPClient
                 }
             }
         }
-
-        private void btn_config_Click(object sender, EventArgs e)
-        {
-            CambiarConfiguracio("IP", txb_ip.Text);
-            CambiarConfiguracio("PORT", txb_port.Text);
-        }
-
-
-        private void CambiarConfiguracio(string key, string value)
-        {
-            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            config.AppSettings.Settings.Remove(key);
-            config.AppSettings.Settings.Add(key, value);
-            config.Save(ConfigurationSaveMode.Modified);
-        }
+        #endregion
     }
 }
