@@ -16,63 +16,86 @@ namespace PracticaTCP
     public partial class frmServer : Form
     {
         Thread hilo1;
-        List<Thread> hilos = new List<Thread>();
         TcpListener Listener;
-        IPAddress address = IPAddress.Parse("127.0.0.1");
         int port;
         TcpClient client;
         byte[] buffer = new byte[1024];
-        NetworkStream Net;
-                
+        NetworkStream str;
+        String mensaje = null;
+        bool listenerStrat = false;
+
+
         public frmServer()
         {
             InitializeComponent();
         }
+
         #region Botones formulario
         private void btn_connect_Click(object sender, EventArgs e)
         {
-            activarListener();
-            port =Int32.Parse( txb_port.Text);
-
+            if (!listenerStrat)
+            {
+                activarListener();
+                listenerStrat = true;
+            }
+            else
+            {
+                lbx_Missatges.Items.Add("The listener is activated");
+            }
+            
+            port =Int32.Parse(txb_port.Text);
         }
         #endregion
         
         private void activarListener() {
-            hilo1 = new Thread(ActivarListener);
-            hilos.Add(hilo1);
+            hilo1 = new Thread(ActivarListener);    
             hilo1.Start();
         }
     
-    
         private void ActivarListener()
         {
-            
-            Listener = new TcpListener(address, port);
+            Listener = new TcpListener(IPAddress.Any, port);
             Listener.Start();
-            client = Listener.AcceptTcpClient();
-            Net = client.GetStream();
-            Socket s = Listener.AcceptSocket();
-
-            int k = s.Receive(buffer);
-            char caracter;
-            for (int i = 0; i < k; i++)
+            
+            byte[] recive = new byte[256];
+            while (true)
             {
-                caracter=Convert.ToChar(buffer[i]);
-            lbx_Missatges.Text += caracter;
+                try
+                {
+                    if (Listener.Pending())
+                    {
+                        client = Listener.AcceptTcpClient();
+                        str = client.GetStream();
+                        Int32 bytes = str.Read(recive, 0, recive.Length);
+                        mensaje = Encoding.UTF8.GetString(recive, 0, bytes);
+                        
+                        if (InvokeRequired)
+                        {
+                            lbx_Missatges.Invoke(new MethodInvoker(delegate () {
+                                        lbx_Missatges.Items.Add(mensaje);
+                                    }
+                                )
+                            );   
+                        }
+                        str.Close();
+                        client.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                   MessageBox.Show(ex.Message);
+                }                        
             }
-           
         }
 
         private void btn_desconnect_Click(object sender, EventArgs e)
         {
-            Net.Close();
-            client.Close();
+
             Listener.Stop();
-        }
+            hilo1.Abort();
+            listenerStrat = false;
 
-        private void lbx_Missatges_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            lbx_Missatges.Items.Clear();                
         }
     }
 }

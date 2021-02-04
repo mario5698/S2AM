@@ -1,12 +1,9 @@
 ﻿using System;
-
 using System.Drawing;
-using System.Collections.Specialized;
 using System.Windows.Forms;
 using System.Net.NetworkInformation;
 using System.Net;
 using System.Threading;
-using System.Configuration;
 using System.Xml.Linq;
 using System.Linq;
 using System.Collections.Generic;
@@ -18,126 +15,81 @@ namespace TCPClient
 {
     public partial class frmClient : Form
     {
-
         bool network;
+        String protocolo = "TCP", configuracion = "Protocol", Xml_IP= "IP", Xml_Port= "Port", leerXml = "TCPSettings.xml";
+        int[] ping = new int[10];
         IPAddress address;
         Ping myPing = new Ping();
         TcpClient Client =null;
         PingReply reply;
-        int[] ping = new int[10];
         List<Thread> hilos = new List<Thread>();
-        Thread hilo1, hilo2, hilo3;
+        Thread  hilo1;
         NetworkStream NetStream;
-        Stream stm; 
         public frmClient()
         {
             InitializeComponent();
-           //permite usar funciones ilegales como hilos 
-          // ejemplo: un hilo invoca a el texbox para darle un valor
-         //   CheckForIllegalCrossThreadCalls = false;
         }
         #region botones formulario
         private void btn_config_Click(object sender, EventArgs e)
         {
-          //  GuardarXml();
+            guardarXml();
         }
 
         private void btn_comprovarXarxa_Click(object sender, EventArgs e)
         {
-            CargarXML();
+            cargarXml();
             ComprobarRed();
         }
         private void btn_sendMessage_Click(object sender, EventArgs e)
         {
-            Client = new TcpClient(txb_ip.Text, Int32.Parse(txb_port.Text));
-            NetStream = Client.GetStream();
-            byte[] frase = Encoding.UTF8.GetBytes(txb_message.Text);
-            NetStream.Write(frase,0,frase.Length);
-
-
+            enviar();
         }
+     
         private void btn_desconnect_Click(object sender, EventArgs e)
         {
             foreach (Thread T in hilos) if (T.IsAlive) T.Abort();
-            /*
-            hilo1.Abort();
-            hilo2.Abort();
-            hilo3.Abort();
-            */
         }
         #endregion
 
         #region Creador de Hilos
-        private void CargarXML()
-        {
-            hilo1 = new Thread(IniciarHiloXML);
-            hilos.Add(hilo1);
-            hilo1.Start();
-        }
+      
         private void ComprobarRed()
         {
-            hilo2 = new Thread(IniciarHiloRed);
-            hilos.Add(hilo2);
-            hilo2.Start();
+            hilo1 = new Thread(IniciarHiloRed);
+            hilos.Add(hilo1);
+            hilo1.Start();
         }  
-
-        private void GuardarXml()
-        {
-            hilo3 = new Thread(IniciarHiloGuardado);
-            hilos.Add(hilo3);
-            hilo3.Start();
-        }
         #endregion
 
         #region Invokes Si se requiere la invocaion del hilo esto lo permite
         private void IniciarHiloRed(){
             if (InvokeRequired)
             {
-                Invoke(new Action(() => comprovarRed()));
+                Invoke(new Action( () => comprovarRed()));
             }
         }
        
-        private void IniciarHiloXML() {
-            if (InvokeRequired)
-            {
-                Invoke(new Action(() => cargarXml()));
-            }
-        }
-     
-        private void IniciarHiloGuardado()
-        {
-            if (InvokeRequired)
-            {
-                Invoke(new Action(()=> guardarXml()));
-            }
-        }
         #endregion
 
         #region Funciones
         private void cargarXml() {
-            XElement options = XElement.Load(".\\TCPSettings.xml");
+            XElement options = XElement.Load(leerXml);
+            IEnumerable<XElement> dades = (from Direcion in options.Element(configuracion).Elements(protocolo)
+                                               select Direcion);
 
-            foreach (XElement xEle in options.Descendants("IP"))
-            {
-                txb_ip.Text = xEle.Value; 
-            }
-            foreach (XElement xEle in options.Descendants("Port"))
-            {
-                txb_port.Text = xEle.Value;
-            }
+            txb_ip.Text = dades.First().Element(Xml_IP).Value;
+            txb_port.Text = dades.First().Element(Xml_Port).Value;
         }
-
-        
 
         private void guardarXml()
         {
-            XElement IP = XElement.Load("TCPSettings.xml");
-            IEnumerable<XElement> direccio = (from Direcion in IP.Elements("TCP")
-                                                     select Direcion);
+            XElement IP = XElement.Load(leerXml);
+            IEnumerable<XElement> direccion = (from Direcion in IP.Element(configuracion).Elements(protocolo)
+                                               select Direcion);
 
-            direccio.First().Element("IP").Value = txb_ip.Text;
-            direccio.First().Element("Port").Value = txb_ip.Text;
-            IP.Save("TCPSettings.xml");
+            direccion.First().Element(Xml_IP).Value = txb_ip.Text;
+            direccion.First().Element(Xml_Port).Value =  txb_port.Text;
+            IP.Save(leerXml);
         }
 
         private void comprovarRed()
@@ -154,10 +106,8 @@ namespace TCPClient
                     try
                     {
                         reply = myPing.Send(address, 80);
-
                         if (reply != null)
                         {
-                           // MessageBox.Show("hola");
                             lbx_console.Items.Add("ping" + i + "-" + reply.Status.ToString());
                         }
                         label5.Text = "Connexio Correcta";
@@ -172,9 +122,16 @@ namespace TCPClient
                         label5.Text = "Xarxa no disponible";
                         pnl_status.BackColor = Color.Red;
                     }
-
                 }
             }
+        }
+
+        private void enviar()
+        {
+            Client = new TcpClient(txb_ip.Text, Int32.Parse(txb_port.Text));
+            NetStream = Client.GetStream();
+            byte[] frase = Encoding.UTF8.GetBytes(txb_message.Text);
+            NetStream.Write(frase, 0, frase.Length);
         }
         #endregion
     }

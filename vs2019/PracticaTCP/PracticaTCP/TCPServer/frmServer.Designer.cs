@@ -64,7 +64,6 @@
             this.lbx_Missatges.Name = "lbx_Missatges";
             this.lbx_Missatges.Size = new System.Drawing.Size(447, 244);
             this.lbx_Missatges.TabIndex = 5;
-            this.lbx_Missatges.SelectedIndexChanged += new System.EventHandler(this.lbx_Missatges_SelectedIndexChanged);
             // 
             // txb_port
             // 
