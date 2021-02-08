@@ -23,7 +23,7 @@ namespace WebApiFlutter.Controllers
 
         // GET: api/Tasks
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Tasks>>> GetTask()
+        public async Task<ActionResult<IEnumerable<Tasks>>> GetTasks()
         {
             return await _context.Tasks.ToListAsync();
         }

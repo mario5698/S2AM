@@ -1,0 +1,31 @@
+create table [Users] (
+Id int not null ,
+Name nvarchar(100),
+Token  nvarchar(100),
+Direction nvarchar(100),
+Mobile int,
+primary key (UserID)
+)
+
+create table Riders(
+Id int not null,
+Name nvarchar(100),
+Mobile int,
+Vehicle nvarchar(100),
+primary key (RidersId)
+)
+
+
+create table Tasks (
+Id int not null,
+Content nvarchar(100),
+Direction_Delivery nvarchar(100),
+Direction_Pickup nvarchar(100),
+UserID int not null,
+RiderID int,
+Asigned bit,
+[State] nvarchar(100)
+primary key (TaskID),
+foreign key(UserID) references [Users](UserID),
+foreign key(RiderID) references Riders(RidersId),
+)
