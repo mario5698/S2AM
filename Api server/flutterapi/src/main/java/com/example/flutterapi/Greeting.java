@@ -1,7 +1,5 @@
 package com.example.flutterapi;
 
-import org.springframework.web.filter.ServletContextRequestLoggingFilter;
-
 public class Greeting {
 
     private final long id;
