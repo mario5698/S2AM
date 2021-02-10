@@ -1,0 +1,10 @@
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\bin\Debug\Estructura de dades.exe.config
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\bin\Debug\Estructura de dades.exe
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\bin\Debug\Estructura de dades.pdb
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\obj\Debug\Estructura_de_dades.Form1.resources
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\obj\Debug\Estructura_de_dades.Properties.Resources.resources
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\obj\Debug\Estructura de dades.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\obj\Debug\Estructura de dades.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\obj\Debug\Estructura de dades.exe
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\obj\Debug\Estructura de dades.pdb
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Estructura de dades\obj\Debug\Estructura de dades.csprojAssemblyReference.cache
