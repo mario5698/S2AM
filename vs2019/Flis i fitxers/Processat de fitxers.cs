@@ -7,8 +7,11 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.IO.Compression;
 
 namespace Flis_i_fitxers
 {
@@ -18,6 +21,10 @@ namespace Flis_i_fitxers
         ArrayList Numeros = new ArrayList();
         List<codificacio> codificacion = new List<codificacio>();
         Queue Cola = new Queue();
+        Thread hilo1,hilo2;
+        bool FilesCreated = false;
+        bool Codi_Create = false; 
+        
         public Form1()
         {
             InitializeComponent();
@@ -25,18 +32,15 @@ namespace Flis_i_fitxers
             Add_Numeros_arraylist();
         }
         
-        private void Add_Codificacio(){
-
+        private void Add_Codificacio()
+        {
             for (int i = 0; i < Vocals.Count; i++)
             {
                 string vocal = Vocals[i];
                 string numero = gen_num_random();
-
                 codificacio frase = new codificacio();
-
                 frase.Letra = vocal;
                 frase.Numero = numero;
-                MessageBox.Show(numero);
                 codificacion.Add(frase);
             }
         }
@@ -89,7 +93,6 @@ namespace Flis_i_fitxers
             {
                 result = bytes[bytes[0] % bytes.Length] % modulo + minimo;
             }
-
             return result;
         }
         private void Add_Numeros_arraylist()
@@ -112,21 +115,81 @@ namespace Flis_i_fitxers
         private void btn_gen_Codificacio_Click(object sender, EventArgs e)
         {
             Add_Codificacio();
+            Codi_Create = true;
+
         }
        
-
-        private void btn_gen_Fitxers_Click(object sender, EventArgs e)
-        {
-
-        }
         public class codificacio {
           public  string Letra;
            public    string Numero;
         }
 
-        private void tbx_num_lletres_TextChanged(object sender, EventArgs e)
+        private void btn_gen_Fitxers_Click(object sender, EventArgs e)
         {
+            hilo1 = new Thread(Crear_documentos);
+            hilo1.Start();
+            hilo2 = new Thread(Comprimir_Documentos);
+            hilo2.Start();
+        }
 
+        private void Comprimir_Documentos()
+        {
+            hilo1.Join();
+            if (FilesCreated)
+            {
+                string ComprimirArxius = @"..\FitxersAComprimir";
+                string GuardarCompress = @"..\FitxersComprimits\";
+                string nombreCompress = "ArxiusComprimits.zip";
+                File.Delete(GuardarCompress + nombreCompress);
+                ZipFile.CreateFromDirectory(ComprimirArxius, GuardarCompress + nombreCompress);
+                MessageBox.Show("Compressed");
+            }
+        }
+
+        
+        private void Crear_documentos()
+        {
+            string tbx_fit = txb_num_fitxers.Text;
+            string tbx_lle = tbx_num_lletres.Text;
+            if (Codi_Create)
+            {
+                if (tbx_fit != "" && tbx_lle != "")
+                {
+                    int numero = Int32.Parse(tbx_fit);
+                    int letras = Int32.Parse(tbx_lle);
+                    if (numero >= 100 && letras >= 1000)
+                    {
+                        Parallel.For(1, numero + 1, (i) =>
+                        {
+                            string fileName = @"..\FitxersAComprimir\Fitxer" + i + ".txt";
+                            FileStream stream = new FileStream(fileName, FileMode.OpenOrCreate,
+                            FileAccess.Write);
+                            StreamWriter writer = new StreamWriter(stream);
+
+
+                            for (int count = 0; count < (letras / 5); count++)
+                            {
+                                foreach (codificacio item in codificacion)
+                                {
+                                    writer.WriteLine(item.Letra + ": " + item.Numero);
+                                }
+                            }
+                            writer.Close();                        
+                        });
+                        FilesCreated = true;
+
+                        MessageBox.Show("Files Created");
+                    }
+                    else
+                    {
+                        MessageBox.Show("El numero de fitxer a de ser major a 100");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Primer s´ha de generar una codificacio");
+            }
         }
     }
 }

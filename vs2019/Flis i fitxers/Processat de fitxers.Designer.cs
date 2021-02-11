@@ -72,7 +72,6 @@ namespace Flis_i_fitxers
             this.tbx_num_lletres.Name = "tbx_num_lletres";
             this.tbx_num_lletres.Size = new System.Drawing.Size(132, 22);
             this.tbx_num_lletres.TabIndex = 5;
-            this.tbx_num_lletres.TextChanged += new System.EventHandler(this.tbx_num_lletres_TextChanged);
             // 
             // btn_gen_Codificacio
             // 
