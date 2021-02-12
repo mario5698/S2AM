@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mario\\Desktop\\Github\\S2AM\\Flutter api test\\WebApiFlutter\\WebApiFlutter.csproj": {}
+    "C:\\Users\\admin\\Desktop\\github\\S2AM\\Flutter api test\\WebApiFlutter\\WebApiFlutter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mario\\Desktop\\Github\\S2AM\\Flutter api test\\WebApiFlutter\\WebApiFlutter.csproj": {
+    "C:\\Users\\admin\\Desktop\\github\\S2AM\\Flutter api test\\WebApiFlutter\\WebApiFlutter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mario\\Desktop\\Github\\S2AM\\Flutter api test\\WebApiFlutter\\WebApiFlutter.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\github\\S2AM\\Flutter api test\\WebApiFlutter\\WebApiFlutter.csproj",
         "projectName": "WebApiFlutter",
-        "projectPath": "C:\\Users\\Mario\\Desktop\\Github\\S2AM\\Flutter api test\\WebApiFlutter\\WebApiFlutter.csproj",
-        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mario\\Desktop\\Github\\S2AM\\Flutter api test\\WebApiFlutter\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Desktop\\github\\S2AM\\Flutter api test\\WebApiFlutter\\WebApiFlutter.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\github\\S2AM\\Flutter api test\\WebApiFlutter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
