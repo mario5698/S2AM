@@ -151,3 +151,4 @@ C:\Users\Mario\Desktop\Github\S2AM\Flutter api test\WebApiFlutter\bin\Debug\netc
 C:\Users\Mario\Desktop\Github\S2AM\Flutter api test\WebApiFlutter\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Mario\Desktop\Github\S2AM\Flutter api test\WebApiFlutter\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Mario\Desktop\Github\S2AM\Flutter api test\WebApiFlutter\obj\Debug\netcoreapp3.1\WebApiFlutter.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\S2AM\Flutter api test\WebApiFlutter\obj\Debug\netcoreapp3.1\WebApiFlutter.csprojAssemblyReference.cache

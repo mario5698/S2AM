@@ -1,31 +1,43 @@
 create table [Users] (
-Id int not null ,
-Name nvarchar(100),
+Id int not null,
+Name nvarchar(100) not null,
 Token  nvarchar(100),
-Direction nvarchar(100),
-Mobile int,
-primary key (UserID)
+Direction nvarchar(100) not null,
+Mobile int not null,
+primary key (Id),
 )
 
 create table Riders(
 Id int not null,
-Name nvarchar(100),
-Mobile int,
-Vehicle nvarchar(100),
-primary key (RidersId)
+Name nvarchar(100) not null,
+Mobile int not null,
+Vehicle nvarchar(100) not null,
+primary key (Id),
 )
 
 
 create table Tasks (
 Id int not null,
-Content nvarchar(100),
-Direction_Delivery nvarchar(100),
-Direction_Pickup nvarchar(100),
+Content nvarchar(100) not null,
+Direction_Delivery nvarchar(100) not null,
+Direction_Pickup nvarchar(100) not null,
 UserID int not null,
 RiderID int,
 Asigned bit,
 [State] nvarchar(100)
-primary key (TaskID),
-foreign key(UserID) references [Users](UserID),
-foreign key(RiderID) references Riders(RidersId),
+primary key (id)
+foreign key(UserID) references [Users](Id),
+foreign key(RiderID) references Riders(Id),
 )
+
+insert into riders (Id,Name,Mobile,Vehicle) values (1, 'mario', 123456789, 'coche');
+insert into users (Id,Name,Token,Direction,Mobile) values (1, 'miguel','token random','calle maragall', 123456789);
+insert into Tasks (Id, Content ,Direction_Delivery ,Direction_Pickup ,UserID ,RiderID  ,State ) values (1,'cosas','calle maragall','calle roterdam', 1,1, null);
+
+///////////////////////////  DROP TABLES  ///////////////////////////   
+drop table Tasks;
+drop table Users;
+drop table Riders;
+
+
+

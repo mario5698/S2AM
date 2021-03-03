@@ -7,3 +7,4 @@ C:\Users\Mario\Desktop\Github\S2AM\vs2019\Flis i fitxers\obj\Debug\Flis i fitxer
 C:\Users\Mario\Desktop\Github\S2AM\vs2019\Flis i fitxers\obj\Debug\Flis i fitxers.csproj.CoreCompileInputs.cache
 C:\Users\Mario\Desktop\Github\S2AM\vs2019\Flis i fitxers\obj\Debug\Flis i fitxers.exe
 C:\Users\Mario\Desktop\Github\S2AM\vs2019\Flis i fitxers\obj\Debug\Flis i fitxers.pdb
+C:\Users\Mario\Desktop\Github\S2AM\vs2019\Flis i fitxers\obj\Debug\Flis i fitxers.csprojAssemblyReference.cache

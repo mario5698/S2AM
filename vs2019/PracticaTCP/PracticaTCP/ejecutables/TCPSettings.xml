@@ -2,8 +2,8 @@
 <ConfigurationData>
   <Protocol>
     <TCP>
-      <IP>127.0.0.1</IP>
-      <Port>80</Port>
+      <IP></IP>
+      <Port></Port>
     </TCP>
     <UDP>
       <IP>127.0.0.1</IP>
