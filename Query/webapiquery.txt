@@ -1,4 +1,5 @@
 create table [Users] (
+<<<<<<< HEAD
 Id int not null,
 Name nvarchar(100) not null,
 Token  nvarchar(100),
@@ -13,18 +14,42 @@ Name nvarchar(100) not null,
 Mobile int not null,
 Vehicle nvarchar(100) not null,
 primary key (Id),
+=======
+Id int IDENTITY(1,1) not null ,
+Name nvarchar(100),
+Token  nvarchar(100),
+Direction nvarchar(100),
+Mobile int,
+primary key (Id)
+)
+
+create table Riders(
+Id int IDENTITY(1,1) not null,
+Name nvarchar(100),
+Mobile int,
+Vehicle nvarchar(100),
+primary key (Id)
+>>>>>>> f1f02f98d1991cf377bd305eba49981ee141af79
 )
 
 
 create table Tasks (
+<<<<<<< HEAD
 Id int not null,
 Content nvarchar(100) not null,
 Direction_Delivery nvarchar(100) not null,
 Direction_Pickup nvarchar(100) not null,
+=======
+Id int IDENTITY(1,1) not null,
+Content nvarchar(100),
+Direction_Delivery nvarchar(100),
+Direction_Pickup nvarchar(100),
+>>>>>>> f1f02f98d1991cf377bd305eba49981ee141af79
 UserID int not null,
 RiderID int,
 Asigned bit,
 [State] nvarchar(100)
+<<<<<<< HEAD
 primary key (id)
 foreign key(UserID) references [Users](Id),
 foreign key(RiderID) references Riders(Id),
@@ -41,3 +66,9 @@ drop table Riders;
 
 
 
+=======
+primary key (Id),
+foreign key(UserID) references [Users](Id),
+foreign key(RiderID) references Riders(Id),
+)
+>>>>>>> f1f02f98d1991cf377bd305eba49981ee141af79

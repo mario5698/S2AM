@@ -11,8 +11,12 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>WebApiFlutter.Data.WebApiFlutterContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
+<<<<<<< HEAD
     <NameOfLastUsedPublishProfile>IISProfile</NameOfLastUsedPublishProfile>
     <ActiveDebugProfile>WebApiFlutter</ActiveDebugProfile>
+=======
+    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
+>>>>>>> f1f02f98d1991cf377bd305eba49981ee141af79
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

@@ -28,7 +28,7 @@ class ScanResultTile extends StatelessWidget {
         ],
       );
     } else {
-      // return Text(result.device.id.toString());
+      return Text(result.device.id.toString());
     }
   }
 
