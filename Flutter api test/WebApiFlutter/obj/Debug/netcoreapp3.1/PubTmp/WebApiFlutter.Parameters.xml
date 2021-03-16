@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="IIS Web Application Name" description="" value="g2teamsarria-001-site1" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Mario\\Desktop\\Github\\S2AM\\Flutter\ api\ test\\WebApiFlutter\\obj\\Debug\\netcoreapp3\.1\\PubTmp\\Out\\$" />
-  </parameter>
-  <parameter name="WebApiFlutter.Data.WebApiFlutterContext" description="" value=" Data Source=den1.mssql8.gear.host;Initial Catalog=odisenddb;User ID=odisenddb;Password=En39A6_ia_kS " tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\Mario\\Desktop\\Github\\S2AM\\Flutter\ api\ test\\WebApiFlutter\\obj\\Debug\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\WebApiFlutter\.Data\.WebApiFlutterContext\.sql$" />
-  </parameter>
-</parameters>
