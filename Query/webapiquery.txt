@@ -39,7 +39,7 @@ id int IDENTITY(1,1) NOT NULL,
 CodeRoute nvarchar(12) NULL,
 DescRoute nvarchar(50) NULL,
 Constraint pk_routes_id PRIMARY  key (id)
-);
+)
 
 SET IDENTITY_INSERT [dbo].[Routes] ON 
 
