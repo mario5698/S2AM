@@ -35,7 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtQuantitat = new System.Windows.Forms.TextBox();
             this.txtPreu = new System.Windows.Forms.TextBox();
-            this.btnAddDetall = new System.Windows.Forms.Button();
+            this.btnDetall = new System.Windows.Forms.Button();
             this.cmbProductes = new System.Windows.Forms.ComboBox();
             this.dtgProductes = new System.Windows.Forms.DataGridView();
             this.btnBrut = new System.Windows.Forms.Button();
@@ -71,11 +71,10 @@
             "Client BB",
             "Client CC"});
             this.cmbClients.Location = new System.Drawing.Point(131, 82);
-            this.cmbClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbClients.Margin = new System.Windows.Forms.Padding(4);
             this.cmbClients.Name = "cmbClients";
             this.cmbClients.Size = new System.Drawing.Size(160, 24);
             this.cmbClients.TabIndex = 0;
-           // this.cmbClients.SelectedIndexChanged += new System.EventHandler(this.cmbClients_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -120,7 +119,7 @@
             // txtQuantitat
             // 
             this.txtQuantitat.Location = new System.Drawing.Point(131, 218);
-            this.txtQuantitat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuantitat.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantitat.Name = "txtQuantitat";
             this.txtQuantitat.Size = new System.Drawing.Size(51, 22);
             this.txtQuantitat.TabIndex = 7;
@@ -128,21 +127,21 @@
             // txtPreu
             // 
             this.txtPreu.Location = new System.Drawing.Point(131, 256);
-            this.txtPreu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPreu.Margin = new System.Windows.Forms.Padding(4);
             this.txtPreu.Name = "txtPreu";
             this.txtPreu.Size = new System.Drawing.Size(51, 22);
             this.txtPreu.TabIndex = 8;
             // 
-            // btnAddDetall
+            // btnDetall
             // 
-            this.btnAddDetall.Location = new System.Drawing.Point(208, 235);
-            this.btnAddDetall.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAddDetall.Name = "btnAddDetall";
-            this.btnAddDetall.Size = new System.Drawing.Size(116, 46);
-            this.btnAddDetall.TabIndex = 10;
-            this.btnAddDetall.Text = "Afegeix producte";
-            this.btnAddDetall.UseVisualStyleBackColor = true;
-            this.btnAddDetall.Click += new System.EventHandler(this.btnAddDetall_Click);
+            this.btnDetall.Location = new System.Drawing.Point(208, 235);
+            this.btnDetall.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDetall.Name = "btnDetall";
+            this.btnDetall.Size = new System.Drawing.Size(116, 46);
+            this.btnDetall.TabIndex = 10;
+            this.btnDetall.Text = "Afegeix producte";
+            this.btnDetall.UseVisualStyleBackColor = true;
+            this.btnDetall.Click += new System.EventHandler(this.btnDetall_Click);
             // 
             // cmbProductes
             // 
@@ -155,7 +154,7 @@
             "Producte BB",
             "Producte CC"});
             this.cmbProductes.Location = new System.Drawing.Point(131, 181);
-            this.cmbProductes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbProductes.Margin = new System.Windows.Forms.Padding(4);
             this.cmbProductes.Name = "cmbProductes";
             this.cmbProductes.Size = new System.Drawing.Size(192, 24);
             this.cmbProductes.TabIndex = 12;
@@ -166,7 +165,7 @@
             this.dtgProductes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgProductes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProductes.Location = new System.Drawing.Point(41, 299);
-            this.dtgProductes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgProductes.Margin = new System.Windows.Forms.Padding(4);
             this.dtgProductes.MultiSelect = false;
             this.dtgProductes.Name = "dtgProductes";
             this.dtgProductes.ReadOnly = true;
@@ -178,7 +177,7 @@
             // btnBrut
             // 
             this.btnBrut.Location = new System.Drawing.Point(616, 299);
-            this.btnBrut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBrut.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrut.Name = "btnBrut";
             this.btnBrut.Size = new System.Drawing.Size(116, 46);
             this.btnBrut.TabIndex = 17;
@@ -189,7 +188,7 @@
             // btnIVA
             // 
             this.btnIVA.Location = new System.Drawing.Point(616, 352);
-            this.btnIVA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIVA.Margin = new System.Windows.Forms.Padding(4);
             this.btnIVA.Name = "btnIVA";
             this.btnIVA.Size = new System.Drawing.Size(116, 46);
             this.btnIVA.TabIndex = 18;
@@ -200,7 +199,7 @@
             // btnDespesa
             // 
             this.btnDespesa.Location = new System.Drawing.Point(616, 405);
-            this.btnDespesa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDespesa.Margin = new System.Windows.Forms.Padding(4);
             this.btnDespesa.Name = "btnDespesa";
             this.btnDespesa.Size = new System.Drawing.Size(116, 46);
             this.btnDespesa.TabIndex = 19;
@@ -211,7 +210,7 @@
             // btnDescompte
             // 
             this.btnDescompte.Location = new System.Drawing.Point(616, 458);
-            this.btnDescompte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDescompte.Margin = new System.Windows.Forms.Padding(4);
             this.btnDescompte.Name = "btnDescompte";
             this.btnDescompte.Size = new System.Drawing.Size(116, 46);
             this.btnDescompte.TabIndex = 20;
@@ -222,7 +221,7 @@
             // btnTotal
             // 
             this.btnTotal.Location = new System.Drawing.Point(616, 511);
-            this.btnTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTotal.Margin = new System.Windows.Forms.Padding(4);
             this.btnTotal.Name = "btnTotal";
             this.btnTotal.Size = new System.Drawing.Size(116, 46);
             this.btnTotal.TabIndex = 21;
@@ -309,7 +308,7 @@
             // btnComanda
             // 
             this.btnComanda.Location = new System.Drawing.Point(323, 63);
-            this.btnComanda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnComanda.Margin = new System.Windows.Forms.Padding(4);
             this.btnComanda.Name = "btnComanda";
             this.btnComanda.Size = new System.Drawing.Size(116, 46);
             this.btnComanda.TabIndex = 29;
@@ -323,9 +322,9 @@
             this.grpResum.Controls.Add(this.cmbEstat);
             this.grpResum.Controls.Add(this.label6);
             this.grpResum.Location = new System.Drawing.Point(39, 614);
-            this.grpResum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpResum.Margin = new System.Windows.Forms.Padding(4);
             this.grpResum.Name = "grpResum";
-            this.grpResum.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpResum.Padding = new System.Windows.Forms.Padding(4);
             this.grpResum.Size = new System.Drawing.Size(509, 123);
             this.grpResum.TabIndex = 30;
             this.grpResum.TabStop = false;
@@ -335,7 +334,7 @@
             // btnResum
             // 
             this.btnResum.Location = new System.Drawing.Point(319, 34);
-            this.btnResum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnResum.Margin = new System.Windows.Forms.Padding(4);
             this.btnResum.Name = "btnResum";
             this.btnResum.Size = new System.Drawing.Size(116, 46);
             this.btnResum.TabIndex = 15;
@@ -352,7 +351,7 @@
             "Condicionada",
             "Confirmada"});
             this.cmbEstat.Location = new System.Drawing.Point(81, 46);
-            this.cmbEstat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstat.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstat.Name = "cmbEstat";
             this.cmbEstat.Size = new System.Drawing.Size(192, 24);
             this.cmbEstat.TabIndex = 14;
@@ -401,7 +400,7 @@
             this.Controls.Add(this.btnBrut);
             this.Controls.Add(this.dtgProductes);
             this.Controls.Add(this.cmbProductes);
-            this.Controls.Add(this.btnAddDetall);
+            this.Controls.Add(this.btnDetall);
             this.Controls.Add(this.txtPreu);
             this.Controls.Add(this.txtQuantitat);
             this.Controls.Add(this.label5);
@@ -409,7 +408,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbClients);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmComanda";
             this.Text = "Proposta de comanda";
             this.Load += new System.EventHandler(this.frmComanda_Load);
@@ -430,7 +429,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtQuantitat;
         private System.Windows.Forms.TextBox txtPreu;
-        private System.Windows.Forms.Button btnAddDetall;
+        private System.Windows.Forms.Button btnDetall;
         private System.Windows.Forms.ComboBox cmbProductes;
         private System.Windows.Forms.DataGridView dtgProductes;
         private System.Windows.Forms.Button btnBrut;

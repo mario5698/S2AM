@@ -26,7 +26,7 @@ namespace PracticaRefactoring
         {
             if (zona=="Insular")
             {
-                lblObservacions.Text = "Observacions: Pendent de confiormació des de la central";
+                lblObservacions.Text = "Observacions: Pendent de confirmació des de la central";
             }
 
             lblBrut.Text = dades[2];

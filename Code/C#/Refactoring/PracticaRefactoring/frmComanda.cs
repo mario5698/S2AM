@@ -16,7 +16,6 @@ namespace PracticaRefactoring
         public string zona;
         bool novaComanda = false;
         double importMod;
-        int index;
 
         public frmComanda()
         {
@@ -28,7 +27,7 @@ namespace PracticaRefactoring
             lblRepresentant.Text = representant;
         }
 
-        private void btnAddDetall_Click(object sender, EventArgs e)
+        private void btnDetall_Click(object sender, EventArgs e)
         {
             Detall compra = new Detall();
             compra.Producte = cmbProductes.Text;
@@ -46,13 +45,13 @@ namespace PracticaRefactoring
         #region BotonesCalcular
         private void btnBrut_Click(object sender, EventArgs e)
         {
-            importMod = comanda.calcularBrut(Cistella, cmbClients.Text);
+            importMod = comanda.calcularBrut(Cistella);
             modificarText(lblBrut, importMod, 2);
         }
 
         private void btnIVA_Click(object sender, EventArgs e)
         {
-            importMod = comanda.calcularIva(Cistella, cmbClients.Text);
+            importMod = comanda.calcularIva(Cistella);
             modificarText(lblIva, importMod, 3);
         }
 
@@ -71,14 +70,14 @@ namespace PracticaRefactoring
         private void btnTotal_Click(object sender, EventArgs e)
         {
             importMod = comanda.calcularTotal(Cistella, cmbClients.Text);
-            modificarText(lblTotal, importMod, 0);
+            modificarText(lblTotal, importMod);
             
             podemFinalitzar = true;
             grpResum.Visible = true;
         }
         #endregion
 
-        private void modificarText(Control label, double preu, int posicio)
+        private void modificarText(Control label, double preu, int posicio=0)
         {
             double import = 0;
             if (posicio != 0)
@@ -98,8 +97,8 @@ namespace PracticaRefactoring
         {
             //este if es para que se pueda cambiar de cliente
             //siempre y cuando no se haya añadido ningun producto a la cesta 
-            if (Cistella.Count == 0)
-            {
+            //if (Cistella.Count == 0)
+            //{
                 novaComanda = true;
                 contador = contador + 1;
                 DadesComanda = new string[7];
@@ -108,20 +107,17 @@ namespace PracticaRefactoring
                 lblComanda.Text = numComanda;
                 DadesComanda[0] = numComanda;
                 DadesComanda[1] = cmbClients.Text;
-                index = cmbEstat.SelectedIndex;
-            }
-            else
-            {
-                cmbEstat.SelectedIndex = index;
-                MessageBox.Show("No se puede cambiar de cliente cuando ya se ha iniciado uno");
-            }
+            //}else
+            //
+            //  MessageBox.Show("No se puede cambiar de cliente cuando ya se ha iniciado uno");
+            //}
         }
-        /*   Se ha comentado ya que no se podra hacer una cesta de dos clientes diferentes 
+         //  Se ha comentado ya que no se podra hacer una cesta de dos clientes diferentes 
         private void cmbClients_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (novaComanda)
                 DadesComanda[1] = cmbClients.Text;
-        }*/
+        }
 
         #region Estados
         private void cmbEstat_SelectedIndexChanged(object sender, EventArgs e)

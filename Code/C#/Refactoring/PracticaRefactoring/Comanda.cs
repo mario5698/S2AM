@@ -8,7 +8,8 @@ namespace PracticaRefactoring
 {
     class Comanda
     {
-        public double calcularIva(List<Detall> linia, string client)
+        #region Funcions Calculs
+        public double calcularIva(List<Detall> linia)
         {
             double importBrut = 0.0;
             foreach (Detall lin in linia)
@@ -19,37 +20,8 @@ namespace PracticaRefactoring
             return iva;
         }
 
-        public double calcularDescompte(List<Detall> linia, string client)
-        {
-            double importBrut = 0.0;
-            foreach (Detall lin in linia)
-            {
-                importBrut = importBrut + (lin.quantitat * lin.preu);
-            }
-            double descompte = 0.0;
-
-            bool retorna = false;
-            if (retorna) retorna = false; 
-                
-
-            if (client.EndsWith("A"))
-            {
-                descompte = getDescompte(importBrut, 0.05);
-            }
-            if (client.EndsWith("B"))
-            {
-                descompte = getDescompte(importBrut, 0.03);
-            }
-            if (client.EndsWith("C"))
-            {
-                descompte = getDescompte(importBrut, 0.01);
-            }
-            return descompte;
-        }
-
         public double calcularDespesa(List<Detall> linia, string client)
         {
-
             double despesa = 0.0;
             double importBrut = 0.0;
             foreach (Detall lin in linia)
@@ -83,84 +55,106 @@ namespace PracticaRefactoring
             }
             return despesa;
         }
-        public double calcularBrut(List<Detall> linia, string client)
+
+        public double calcularBrut(List<Detall> linia)
         {
-            
-                double importBrut = 0.0;
-                foreach (Detall lin in linia)
-                {
-                    importBrut = importBrut + (lin.quantitat * lin.preu);
-                }
-                return importBrut;
-            
+
+            double importBrut = 0.0;
+            foreach (Detall lin in linia)
+            {
+                importBrut = importBrut + (lin.quantitat * lin.preu);
+            }
+            return importBrut;
+
         }
 
         public double calcularTotal(List<Detall> linia, string client)
         {
+            double importNet = 0.0;
+            double importBrut = 0.0;
+            foreach (Detall lin in linia)
+            {
+                importBrut = importBrut + (lin.quantitat * lin.preu);
+            }
+            double despesa = 0.0;
 
-            
-                double importNet = 0.0;
-                double importBrut = 0.0;
-                foreach (Detall lin in linia)
+            if (client.EndsWith("B"))
+            {
+                if (importBrut > 500)
                 {
-                    importBrut = importBrut + (lin.quantitat * lin.preu);
-                }
-                double despesa = 0.0;
-
-                if (client.EndsWith("B"))
-                {
-                    if (importBrut > 500)
-                    {
-                        despesa = 0.0;
-                    }
-                    else
-                    {
-                        despesa = 5.0;
-                    }
+                    despesa = 0.0;
                 }
                 else
                 {
-                    if (client.EndsWith("C"))
-                    {
-                        despesa = importBrut * 0.03;
-                        if (despesa > 10)
-                            despesa = 10;
-                    }
-                    if (client.EndsWith("A"))
-                    {
-                        despesa = 0.0;
-                    }
+                    despesa = 5.0;
                 }
-
-                double iva = getIva(importBrut);
-
-                double descompte = 0.0;
-
-                bool retorna = false;
-                if (retorna)
-                    retorna = false;
-
-                if (client.EndsWith("A"))
-                {
-                    descompte = getDescompte(importBrut, 0.05);
-                }
-                if (client.EndsWith("B"))
-                {
-                    descompte = getDescompte(importBrut, 0.03);
-                }
+            }
+            else
+            {
                 if (client.EndsWith("C"))
                 {
-                    descompte = getDescompte(importBrut, 0.01);
+                    despesa = importBrut * 0.03;
+                    if (despesa > 10)
+                        despesa = 10;
                 }
+                if (client.EndsWith("A"))
+                {
+                    despesa = 0.0;
+                }
+            }
 
-                importNet = importBrut + iva + despesa - descompte;
-                return importNet;
-            
+            double iva = getIva(importBrut);
+            double descompte = 0.0;
+
+            bool retorna = false;
+            if (retorna)
+                retorna = false;
+
+            if (client.EndsWith("A"))
+            {
+                descompte = getDescompte(importBrut, 0.05);
+            }
+            if (client.EndsWith("B"))
+            {
+                descompte = getDescompte(importBrut, 0.03);
+            }
+            if (client.EndsWith("C"))
+            {
+                descompte = getDescompte(importBrut, 0.01);
+            }
+
+            importNet = importBrut + iva + despesa - descompte;
+            return importNet;
         }
-        /*public double Fercalculs(List<Detall> linia, string tipusCalcul, string client)
+
+        public double calcularDescompte(List<Detall> linia, string client)
         {
-           
-        }*/
+            double importBrut = 0.0;
+            foreach (Detall lin in linia)
+            {
+                importBrut = importBrut + (lin.quantitat * lin.preu);
+            }
+            double descompte = 0.0;
+
+            bool retorna = false;
+            if (retorna) retorna = false;
+
+
+            if (client.EndsWith("A"))
+            {
+                descompte = getDescompte(importBrut, 0.05);
+            }
+            if (client.EndsWith("B"))
+            {
+                descompte = getDescompte(importBrut, 0.03);
+            }
+            if (client.EndsWith("C"))
+            {
+                descompte = getDescompte(importBrut, 0.01);
+            }
+            return descompte;
+        }
+        #endregion
 
         public double getIva(double import)
         {
@@ -171,6 +165,5 @@ namespace PracticaRefactoring
         {
             return import * dto;
         }
-
     }
 }
