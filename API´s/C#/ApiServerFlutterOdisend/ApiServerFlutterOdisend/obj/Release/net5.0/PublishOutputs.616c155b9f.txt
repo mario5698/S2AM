@@ -5,6 +5,9 @@ C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFl
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\ApiServerFlutterOdisend.runtimeconfig.json
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\ApiServerFlutterOdisend.pdb
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Humanizer.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\System.Net.Http.Formatting.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\System.Web.Http.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\System.Web.Http.WebHost.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Microsoft.CodeAnalysis.dll
@@ -33,10 +36,12 @@ C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFl
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Microsoft.Web.Infrastructure.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\Swashbuckle.Core.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\System.Composition.AttributedModel.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\System.Composition.Convention.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\System.Composition.Hosting.dll
@@ -47,6 +52,7 @@ C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFl
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\System.Runtime.Caching.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\WebActivatorEx.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\PubTmp\Out\es\Microsoft.CodeAnalysis.resources.dll

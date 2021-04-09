@@ -138,3 +138,4 @@ C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFl
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\bin\Debug\net5.0\Swashbuckle.Core.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\bin\Debug\net5.0\WebActivatorEx.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Debug\net5.0\ApiServerFlutterOdisend.csprojAssemblyReference.cache

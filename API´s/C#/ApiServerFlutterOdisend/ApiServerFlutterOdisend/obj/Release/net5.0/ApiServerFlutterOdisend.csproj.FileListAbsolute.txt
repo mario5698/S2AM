@@ -133,3 +133,9 @@ C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFl
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\ref\ApiServerFlutterOdisend.dll
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\ApiServerFlutterOdisend.pdb
 C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\obj\Release\net5.0\ApiServerFlutterOdisend.genruntimeconfig.cache
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\bin\Release\net5.0\System.Net.Http.Formatting.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\bin\Release\net5.0\System.Web.Http.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\bin\Release\net5.0\System.Web.Http.WebHost.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\bin\Release\net5.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\bin\Release\net5.0\Swashbuckle.Core.dll
+C:\Users\Mario\Desktop\Github\S2AM\API´s\C#\ApiServerFlutterOdisend\ApiServerFlutterOdisend\bin\Release\net5.0\WebActivatorEx.dll
