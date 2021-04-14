@@ -19,9 +19,8 @@ namespace ApiServerFlutterOdisend.Models
         public string LatPickup { get; set; }
         public string LngDelivery { get; set; }
         public string LatDelivery { get; set; }
-        public double KM { get; set; }
-        public double KG { get; set; }
+        public decimal KM { get; set; }
+        public decimal KG { get; set; }
         public string State { get; set; }
-        
     }
 }
