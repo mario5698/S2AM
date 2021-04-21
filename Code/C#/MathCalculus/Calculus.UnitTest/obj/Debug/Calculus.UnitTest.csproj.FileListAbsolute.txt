@@ -1,0 +1,6 @@
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\Calculus.UnitTest.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\Calculus.UnitTest.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\obj\Debug\Calculus.UnitTest.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\obj\Debug\Calculus.UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\obj\Debug\Calculus.UnitTest.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\obj\Debug\Calculus.UnitTest.pdb

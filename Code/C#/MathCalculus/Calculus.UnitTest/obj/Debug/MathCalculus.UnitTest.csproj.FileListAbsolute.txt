@@ -1,0 +1,17 @@
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\nunit.engine.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\nunit.engine.api.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\nunit.engine.core.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\Calculus.UnitTest.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\Calculus.UnitTest.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\MathCalculus.exe
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\nunit.framework.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\MathCalculus.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\MathCalculus.exe.config
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\bin\Debug\nunit.framework.xml
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\obj\Debug\MathCalculus.UnitTest.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\obj\Debug\MathCalculus.UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\obj\Debug\MathCalculus.UnitTest.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\obj\Debug\Calculus.UnitTest.dll
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\Calculus.UnitTest\obj\Debug\Calculus.UnitTest.pdb
