@@ -19,7 +19,6 @@ namespace TPL
 
         private void cmdCheck_Click(object sender, EventArgs e)
         {
-            // Cal fer una crida a StartProcess() utilitzant una tasca
             hilo1 = new Thread(new ThreadStart(StartProcess));
             hilo1.Start();
         }
@@ -27,46 +26,30 @@ namespace TPL
         private void StartProcess()
         {
             string[] nomFitxer = { "1.txt", "2.txt", "3.txt" };
-            var result = Parallel.For(0, 3, (i, state) =>
+             Parallel.For(0, 3, (i, state) =>
                {
                    string ruta = Application.StartupPath;
                    string rutaFile = ruta + "\\Recursos\\" + nomFitxer[i];
                    string file = System.IO.File.ReadAllText(rutaFile);
-                   file = file.Replace(".", " ");
-                   file = file.Replace(",", " ");
-                   file = file.Replace("-", " ");
-                   file = file.Replace("\n", " ");
-                   file = file.Replace("\r", " ");
+                   ListBox[] listBoxes = new ListBox[3] { lstData0 , lstData1, lstData2 };
+                   file.Replace("-", " ");
+                   file.Replace(",", " ");
+                   file.Replace(".", " ");
+                   file.Replace("\n", " ");
+                   file.Replace("\r", " ");
 
                    string[] words = file.Split(' ');
 
-                   if (i == 0)
-                   {
-                       DoChecks(words, lstData0);
-                   }
-                   if (i == 1)
-                   {
-                       DoChecks(words, lstData1);
-                   }
-                   if (i == 2)
-                   {
-                       DoChecks(words, lstData2);
-                   }
+                       DoChecks(words, listBoxes[i]);
                });
-            //Per a cada fitxer cal fer una crida en paral·lel a la funció DoChecks passant a part de 
-            // l'array de strings també el control on volem pintar els resultats
         }
       
 
         private void DoChecks(string[] words, ListBox lst)
         {
-            //aquí llençarem en paral·lel cadascuna de les tasques a fer en el Helper
-            //Utilitzem aquests arrays per indicar quines paraules volem buscar i quina lletra 
-            //Això serà necessari per alguns mètodes
             lstClear(lst);
             string[] Searchwords = { "white", "time", "that", "the", "empty", "door", "table" };
             string[] SearchLetter = { "A", "C", "W", "Z", "L", "S", "E" };
-            // servirà més tard per trobar a l'atzar la llargada d'algunes paraules
             Random rnd = new Random();
             Parallel.Invoke(() =>
             {
@@ -104,20 +87,14 @@ namespace TPL
         //tasks1 
         private string GetMostCommonWords(string[] words, int len = 5, int quants = 5)
         {
-            // cerca les paraules que apareixen més cops d'una determinada llargada i ens mostren quines són i quants cops apareixen
-            // l'argument quants indica quantes paraules hem de mostrar Si indiquem 5 vol dir que mostrem les 5 que surten més
-            // per defecte passem sempre 5
-            // l'argument len indica la llargada de les paraules i s'obtindrà a partir d'obtenir 
-            // un nombre random entre 4 i 10 a la funció que fa la crida a aquesta
-            var frequencyOrder = from word in words
-                                 where word.Length > len
+             var frequencyOrder = from word in words
                                  group word by word into g
                                  orderby g.Count() descending
                                  select g.Key;
 
             var commonWords = frequencyOrder.Take(quants);
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Task 1 -- GetCommonWords with more than {len} letters: ");
+            sb.AppendLine($"Task 1 -- GetCommonWords with more than  letters: ");
             foreach (var v in commonWords)
             {
                 sb.AppendLine("  " + v + " " + v.Count());
@@ -129,12 +106,8 @@ namespace TPL
         //task2
         private string GetMostCommonWordsByLength(string[] words, int len = 5, int quants = 5)
         {
-            // cerca les paraules que apareixen més cops d'una determinada llargada i ens mostren quines són i quants cops apareixen
-            // l'argument quants indica quantes paraules hem de mostrar Si indiquem 5 vol dir que mostrem les 5 quurte sen més
-            // per defecte passem sempre 5
-            // l'argument len indica la llargada de les paraules i s'obtindrà a partir d'obtenir un nombre random entre 4 i 10 a la funció que fa la crida a aquesta
-            var frequencyOrder = from word in words
-                                 where word.Length > len
+           var frequencyOrder = from word in words
+                                 where word.Length == 3
                                  group word by word into g
                                  orderby g.Count() ascending
                                  select g.Key;
@@ -154,10 +127,7 @@ namespace TPL
         //taks3
         private string GetCountForWord(string[] words, string term)
         {
-            // cerca quants cops apareix la paraula term en el llibre
-            // l'argument term és cadascuna de les paraules que hi ha en l'array de paraules de DoChecks
-
-            var frequencyOrder = from word in words
+          var frequencyOrder = from word in words
                                  where word == term
                                  group word by word into g
                                  orderby g.Count() ascending
@@ -176,15 +146,11 @@ namespace TPL
         //task4
         private string GetCountForLetter(string[] words, string letter)
         {
-            // cerca quants cops apareixen paraules que comencen amb la lletra indicada a l'argument letter 
-            // l'argument letter és cadascuna de les lletres que hi ha en l'array de lletres de  DoChecks
-
             var frequencyOrder = from word in words
                                  where word.StartsWith(letter)
                                  group word by word into g
                                  orderby g.Count() ascending
                                  select g.Key;
-
 
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Task 4 -- The Words that startWith {letter} accurs");
@@ -198,15 +164,9 @@ namespace TPL
             return resultat;
         }
 
-
         //tasks 5
         private string GetLessCommonWords(string[] words, int len = 5, int quants = 5)
         {
-            // cerca quants cops apareixen les paraules que menys apareixen i que tenen una determinada llargada
-            // l'argument quants indica quantes paraules hem de mostrar. Si indiquem 5 vol dir que mostrem les 5 que surten menys
-            // per defecte passem sempre 5 
-            // l'argument len indica la llargada de les paraules i s'obtindrà a partir d'obtenir 
-            // un nombre random entre 4 i 10 a la funció que fa la crida a aquesta
             var frequencyOrder = from word in words
                                  where word.Length > len
                                  group word by word into g
@@ -232,7 +192,6 @@ namespace TPL
             var longestWord = (from w in words
                                orderby w.Length descending
                                select w).First();
-
 
             string resultat = $"Task 6 -- The longest word is {longestWord}.";
             return resultat;
@@ -277,10 +236,6 @@ namespace TPL
                 ));
             }
         }
-
-        ///Falten les funcions que llegeixen el fitxer i en darrer cas el transformen en un array de strings amb les paraules. 
-        ///Podeu utilitzar la funció de l'exemple com a base (CreateWordArray), però penseu que ara els fitxers són locals i no  una URL,
-        ///i que potser caldrà fer-ho d'una forma una mica diferent per afavorir automatitzar el programa.
         #endregion
     }
 }
