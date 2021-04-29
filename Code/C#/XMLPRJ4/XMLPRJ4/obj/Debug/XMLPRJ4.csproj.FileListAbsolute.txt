@@ -1,0 +1,15 @@
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\bin\Debug\XMLPRJ4.exe.config
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\bin\Debug\XMLPRJ4.exe
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\bin\Debug\XMLPRJ4.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\obj\Debug\XMLPRJ4.Form1.resources
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\obj\Debug\XMLPRJ4.Properties.Resources.resources
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\obj\Debug\XMLPRJ4.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\obj\Debug\XMLPRJ4.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\obj\Debug\XMLPRJ4.exe
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\obj\Debug\XMLPRJ4.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\Ejecutable\XMLPRJ4.exe.config
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\Ejecutable\XMLPRJ4.exe
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\Ejecutable\XMLPRJ4.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\obj\Debug\XMLPRJ4.LinkQToXml.resources
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\obj\Debug\XMLPRJ4.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\XMLPRJ4\XMLPRJ4\obj\Debug\XMLPRJ4.XmlDocumentForm.resources

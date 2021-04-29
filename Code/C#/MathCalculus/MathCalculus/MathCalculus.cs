@@ -16,6 +16,8 @@ namespace MathCalculus
         public MathCalculus()
         {
             InitializeComponent();
+            lbl_ResultCMD.Text = " ";
+            LBL_Result_MCM.Text = " ";
         }
 
         private void btn_Number_Click(object sender, EventArgs e)
@@ -24,10 +26,11 @@ namespace MathCalculus
             var random = new Random();
             lbl_Num1.Text = random.Next(0, 10).ToString();
             lbl_num2.Text = random.Next(0, 40).ToString();
-            numero1 = int.Parse(lbl_Num1.Text);
+            numero1 =  int.Parse(lbl_Num1.Text);
             numero2 = int.Parse(lbl_num2.Text);
             lbl_ResultCMD.Text = " ";
             LBL_Result_MCM.Text = " ";
+            lst_Results.DataSource = null;
         }
 
         private void btn_CMD_Click(object sender, EventArgs e)
@@ -38,7 +41,7 @@ namespace MathCalculus
             }
             catch (DivideByZeroException x )
             {
-                MessageBox.Show(x.ToString(), "DivideByZeroException");
+                MessageBox.Show(x.Message, "DivideByZeroException");
             }
         }
 
@@ -57,6 +60,7 @@ namespace MathCalculus
         {
             if (butonsPressed())
             {
+
                 List<int> listaCalculs = new List<int>();
                 listaCalculs = clc.setCalculs(numero1, numero2);
                 lst_Results.DataSource = listaCalculs;

@@ -15,3 +15,4 @@ C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\MathCalculus\bin\Debug\n
 C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\MathCalculus\bin\Debug\nunit.framework.dll
 C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\MathCalculus\bin\Debug\nunit.framework.xml
 C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\MathCalculus\obj\Debug\MathCalculus.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\MathCalculus\MathCalculus\obj\Debug\MathCalculus.csprojAssemblyReference.cache

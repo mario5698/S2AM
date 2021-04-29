@@ -1,0 +1,14 @@
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\obj\Debug\PCBCripto.Form1.resources
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\obj\Debug\PCBCripto.Properties.Resources.resources
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\obj\Debug\PCBCripto.servidor_tcp.resources
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\obj\Debug\PCBCripto.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\obj\Debug\PCBCripto.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\bin\Debug\PCBCripto.exe.config
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\bin\Debug\PCBCripto.exe
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\bin\Debug\PCBCripto.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\obj\Debug\PCBCripto.exe
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\obj\Debug\PCBCripto.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\ejecutables\PCBCripto.exe.config
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\ejecutables\PCBCripto.exe
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\ejecutables\PCBCripto.pdb
+C:\Users\Mario\Desktop\Github\S2AM\Code\C#\PCBCripto\PCBCripto\obj\Debug\PCBCripto.csprojAssemblyReference.cache
