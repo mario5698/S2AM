@@ -66,8 +66,6 @@ namespace PracticaRSA
 
         private void btn_showKey_Click(object sender, EventArgs e)
         {
-            
-
             tbx_pubkey.Text = File.ReadAllText(dialog.FileName);
         }
 

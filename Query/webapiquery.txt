@@ -22,12 +22,18 @@ primary key (Id)
 
 create table Tasks (
 Id int not null,
-Direction_Delivery nvarchar(100) not null,
-Direction_Pickup nvarchar(100) not null,
+DirectionDelivery nvarchar(100) not null,
+DirectionPickup nvarchar(100) not null,
 Content nvarchar(200) not null,
 UserID int not null,
 RiderID int,
 Asigned bit,
+TokePickup nvarchar(200),
+TokenDelivery nvarchar(200),
+LongPickup  nvarchar(200),
+LatPickup  nvarchar(200),
+LongDelivery  nvarchar(200),
+LatDelivery  nvarchar(200),
 [State] nvarchar(100)
 primary key (id)
 foreign key(UserID) references [Users](Id),

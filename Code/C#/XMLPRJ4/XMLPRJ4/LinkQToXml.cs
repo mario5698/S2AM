@@ -59,7 +59,6 @@ namespace XMLPRJ4
         private void treeView1_TabIndexChanged(object sender, EventArgs e)
         {
             int id = dictSpaceship[treeView1.SelectedNode.ToString()];
-
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
